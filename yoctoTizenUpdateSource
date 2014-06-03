@@ -28,11 +28,13 @@ fi
 if [ -z ${WORKINGDIR} ] ;then
     WORKINGDIR_DOWNLOADS=${WORKINGDIR}/downloads
 fi
-mkdir -p WORKINGDIR_DOWNLOADS
+mkdir -p ${WORKINGDIR_DOWNLOADS}
 if [ $? -ne 0 ] ;then
     exit 1
 fi
 
+#You can replace the git clone command by cache command
+#https://github.com/kooltux/git-cache
 if [ -z ${CLONE_CMD} ] ;then
     CLONE_CMD=clone
 fi
@@ -82,11 +84,3 @@ cd ${WORKINGDIR}/meta-tizen
 git reset --hard ${META_TIZEN_REV}
 echo
 #----------------------------------------------------------------------------
-
-
-
-
-
-
-
-
