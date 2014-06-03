@@ -1,0 +1,92 @@
+#!/bin/bash
+
+POKY_REV=origin/master
+META_INTEL_REV=6396a98832719c07dba56184580238d1f92f166c
+META_TIZEN_REV=origin/tizen
+META_OPENEMBEDDED_REV=dca466c074c9a35bc0133e7e0d65cca0731e2acf
+
+# If user have no yoctoTizenrc
+if [ ! -e ${HOME}/.yoctoTizenrc ] ;then
+    cp  $(dirname $0)/yoctoTizenrc ${HOME}/.yoctoTizenrc
+fi
+source ${HOME}/.yoctoTizenrc
+
+if [ -z ${YOUR_TIZEN_ID} ] ;then
+    echo The variable \"YOUR_TIZEN_ID\" is empty please configure it.
+    echo Open file ${HOME}/.yoctoTizenrc
+    exit 1
+fi
+
+if [ -z ${WORKINGDIR} ] ;then
+    WORKINGDIR=${HOME}/yocto
+fi
+mkdir -p ${WORKINGDIR}
+if [ $? -ne 0 ] ;then
+    exit 1
+fi
+
+if [ -z ${WORKINGDIR} ] ;then
+    WORKINGDIR_DOWNLOADS=${WORKINGDIR}/downloads
+fi
+mkdir -p WORKINGDIR_DOWNLOADS
+if [ $? -ne 0 ] ;then
+    exit 1
+fi
+
+if [ -z ${CLONE_CMD} ] ;then
+    CLONE_CMD=clone
+fi
+
+#----------------------------------------------------------------------------
+if [ -d ${WORKINGDIR}/poky ] ; then
+    cd ${WORKINGDIR}/poky
+    git fetch --all
+else
+    cd ${WORKINGDIR}
+    git ${CLONE_CMD} https://github.com/eurogiciel-oss/poky.git poky
+fi
+cd ${WORKINGDIR}/poky
+git reset --hard ${POKY_REV}
+echo
+#----------------------------------------------------------------------------
+if [ -d ${WORKINGDIR}/meta-intel ] ; then
+    cd ${WORKINGDIR}/meta-intel
+    git fetch --all
+else
+    cd ${WORKINGDIR}
+    git ${CLONE_CMD} git://git.yoctoproject.org/meta-intel meta-intel
+fi
+cd ${WORKINGDIR}/meta-intel
+git reset --hard ${META_INTEL_REV}
+echo
+#----------------------------------------------------------------------------
+if [ -d ${WORKINGDIR}/meta-openembedded ] ; then
+    cd ${WORKINGDIR}/meta-openembedded
+    git fetch --all
+else
+    cd ${WORKINGDIR}
+    git ${CLONE_CMD} git://git.openembedded.org/meta-openembedded meta-openembedded
+fi
+cd ${WORKINGDIR}/meta-openembedded
+git reset --hard ${META_OPENEMBEDDED_REV}
+echo
+#----------------------------------------------------------------------------
+if [ -d ${WORKINGDIR}/meta-tizen ] ; then
+    cd ${WORKINGDIR}/meta-tizen
+    git fetch --all
+else
+    cd ${WORKINGDIR}
+    git ${CLONE_CMD} ssh://${YOUR_TIZEN_ID}@review.tizen.org:29418/scm/bb/meta-tizen meta-tizen
+fi
+cd ${WORKINGDIR}/meta-tizen
+git reset --hard ${META_TIZEN_REV}
+echo
+#----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
