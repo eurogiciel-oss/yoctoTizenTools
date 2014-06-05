@@ -1,44 +1,113 @@
 #!/bin/bash
+# -*- coding: utf-8 -*-
+#
+# Copyright (c) 2012-2013 Intel, Inc.
+# License: GPLv2
+# Authors: Ronan Le Martret <ronan.lemartret@open.eurogiciel.org>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2,
+# as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
 
-POKY_REV=origin/master
-META_INTEL_REV=6396a98832719c07dba56184580238d1f92f166c
-META_TIZEN_REV=origin/tizen
-META_OPENEMBEDDED_REV=dca466c074c9a35bc0133e7e0d65cca0731e2acf
+VERBOSE="yes"
+SHOW_HELP="no"
+
+while test $# -gt 0; do
+  case $1 in
+    *-help)
+      SHOW_HELP="yes"
+      shift
+    ;;
+    *-h)
+      SHOW_HELP="yes"
+      shift
+    ;;
+    *-verbose)
+      VERBOSE=$2
+      shift
+      shift
+    ;;
+    *)
+      echo "Unknown parameter $1."
+      echo "This script is not accepting this parameter currently."
+      exit 1
+    ;;
+  esac
+  shift
+done
+
+if [ ${SHOW_HELP} != "no" ]; then
+    echo "copy yocto image to partition"
+    echo "    --help,-h show this help"
+    echo "    --verbose yes/no default yes"
+    exit 0
+fi
+
+SCRIPT_DIR=$(dirname $0)
 
 # If user have no yoctoTizenrc
-if [ ! -e ${HOME}/.yoctoTizenrc ] ;then
-    cp  $(dirname $0)/yoctoTizenrc ${HOME}/.yoctoTizenrc
+if [ ! -e ${SCRIPT_DIR}/yoctoTizen_config ] ;then
+    cp  ${SCRIPT_DIR}/yoctoTizen_config_skeleton ${SCRIPT_DIR}/yoctoTizen_config
 fi
-source ${HOME}/.yoctoTizenrc
+source ${SCRIPT_DIR}/yoctoTizen_config
 
-if [ -z ${YOUR_TIZEN_ID} ] ;then
-    echo The variable \"YOUR_TIZEN_ID\" is empty please configure it.
-    echo Open file ${HOME}/.yoctoTizenrc
-    exit 1
-fi
+test_parameter() {
+    if [ -z $2 ] ;then
+        echo The variable \"$1\" is empty please configure it.
+        echo Open file ${SCRIPT_DIR}/yoctoTizen_config
+        exit 1
+    fi
+}
 
-if [ -z ${WORKINGDIR} ] ;then
-    WORKINGDIR=${HOME}/yocto
+function add_meta_to_bblayers
+{
+echo
+META_DIR=$1
+BBLAYER_FILE=$2
+echo add \"${META_DIR}\" to file ${BBLAYER_FILE}.
+
+if grep -q "${META_DIR} " "${BBLAYER_FILE}"; then
+	echo ${META_DIR} is already present in ${BBLAYER_FILE}.
+else
+	sed -i -e '/meta-yocto-bsp/a \  '${META_DIR}' \\' ${BBLAYER_FILE}
 fi
+}
+
+function change_conf_default_value
+{
+DEFAULT_VALUE=$1
+OUR_VALUE=$2
+CONF_FILE=$3
+echo
+echo into file ${CONF_FILE}
+echo '    change value' \"${DEFAULT_VALUE}\" by \"${OUR_VALUE}\"
+
+if grep -q "${OUR_VALUE}" ${CONF_FILE} ;then
+	echo \"${OUR_VALUE}\" is set in ${CONF_FILE}.
+else
+	sed -i -e "s,${DEFAULT_VALUE}.*,${OUR_VALUE},g" ${CONF_FILE}
+fi
+}
+
+test_parameter YOUR_TIZEN_ID ${YOUR_TIZEN_ID}
+test_parameter WORKINGDIR ${WORKINGDIR}
 mkdir -p ${WORKINGDIR}
 if [ $? -ne 0 ] ;then
     exit 1
 fi
 
-if [ -z ${WORKINGDIR_DOWNLOADS} ] ;then
-    WORKINGDIR_DOWNLOADS=${WORKINGDIR}/downloads
-fi
-mkdir -p ${WORKINGDIR_DOWNLOADS}
-if [ $? -ne 0 ] ;then
-    exit 1
-fi
+test_parameter BUILD_PRJ ${BUILD_PRJ}
+test_parameter CLONE_CMD ${CLONE_CMD}
 
-#You can replace the git clone command by cache command
-#https://github.com/kooltux/git-cache
-if [ -z ${CLONE_CMD} ] ;then
-    CLONE_CMD=clone
+#----------------------------------------------------------------------------
+if [ "${VERBOSE}" = "yes" ] ; then
+    set -x
 fi
-
 #----------------------------------------------------------------------------
 if [ -d ${WORKINGDIR}/poky ] ; then
     cd ${WORKINGDIR}/poky
@@ -94,3 +163,43 @@ cd ${WORKINGDIR}/meta-tizen
 git reset --hard ${META_TIZEN_REV}
 echo
 #----------------------------------------------------------------------------
+echo init build project
+if [ ! -d ${WORKINGDIR}/poky/${BUILD_PRJ} ]; then
+    cd ${WORKINGDIR}/poky
+    source oe-init-build-env ${BUILD_PRJ}
+    add_meta_to_bblayers ${WORKINGDIR}/meta-tizen "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-efl "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-oe "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-multimedia "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-ruby "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-systemd "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    case ${MACHINE} in
+        haswell-wc)
+        add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-haswell-wc "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+        ;;
+        romley-ivb)
+        add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-romley "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+        ;;
+        valleyisland-64)
+        add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+        ;;
+    esac
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+
+    change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
+
+else
+    echo build project is all ready init
+fi
+
+
+if [ ${VERBOSE} = "yes" ] ; then
+    set +x
+fi
+
+echo "To build image:"
+echo "    #" cd ${WORKINGDIR}/poky
+echo "    #" source oe-init-build-env ${BUILD_PRJ}
+echo "    #" bitbake ${BUILD_PRJ}
+
+exit 0
