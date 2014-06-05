@@ -1,6 +1,43 @@
 #!/bin/bash
+# -*- coding: utf-8 -*-
+#
+# Copyright (c) 2012-2013 Intel, Inc.
+# License: GPLv2
+# Authors: Ronan Le Martret <ronan.lemartret@open.eurogiciel.org>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2,
+# as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+
+POKY_REV=origin/master
+META_INTEL_REV=6396a98832719c07dba56184580238d1f92f166c
+META_TIZEN_REV=origin/tizen
+META_OPENEMBEDDED_REV=dca466c074c9a35bc0133e7e0d65cca0731e2acf
 
 YOUR_TIZEN_ID=
-WORKINGDIR=
-WORKINGDIR_DOWNLOADS=
-CLONE_CMD=
+#Default value is WORKINGDIR=${HOME}/yocto
+WORKINGDIR=${HOME}/yocto
+
+#Default value is CLONE_CMD=clone
+CLONE_CMD=clone
+#You can replace the git clone command by cache command
+#https://github.com/kooltux/git-cache
+
+#Default value is MACHINE=romley-ivb
+MACHINE=romley-ivb
+#Default value is BUILD_PRJ=build
+BUILD_PRJ=build
+#Default value is REMOTE_HOST=localhost
+REMOTE_HOST=localhost
+#Default value is REMOTE_USER=root
+REMOTE_USER=root
+#Default value is REBOOT_ENTRY="\"Yocto Tizen Common\""
+REBOOT_ENTRY="\"Yocto Tizen Common\""
+REMOTE_WORKINGDIR_DOWNLOADS=/tmp
+#Default value is IMAGE_NAME=tizen-common-core-image-minimal-dev
+IMAGE_NAME=tizen-common-core-image-minimal-dev
