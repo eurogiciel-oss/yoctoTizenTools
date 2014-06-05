@@ -14,10 +14,19 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
 
-REBOOT_AFTER=no
+REBOOT_AFTER="no"
 VERBOSE="yes"
 SHOW_HELP="no"
 DEPLOY_DIR=
+
+SCRIPT_DIR=$(dirname $0)
+
+# If user have no yoctoTizenrc
+if [ ! -e "${SCRIPT_DIR}"/yoctoTizen_config ] ;then
+    cp  "${SCRIPT_DIR}"/yoctoTizen_config_skeleton "${SCRIPT_DIR}"/yoctoTizen_config
+fi
+source ${SCRIPT_DIR}/yoctoTizen_config
+
 SSH_COMMAND="ssh ${REMOTE_USER}@${REMOTE_HOST} -- "
 
 while test $# -gt 0; do
@@ -57,7 +66,7 @@ while test $# -gt 0; do
   shift
 done
 
-if [ ${SHOW_HELP} != "no" ]; then
+if [ "${SHOW_HELP}" != "no" ]; then
     echo "copy yocto image to partition"
     echo "    --help,-h show this help"
     echo "    --no_remote do not  run this script to remote target"
@@ -67,73 +76,66 @@ if [ ${SHOW_HELP} != "no" ]; then
     exit 0
 fi
 
-SCRIPT_DIR=$(dirname $0)
-
-# If user have no yoctoTizenrc
-if [ ! -e ${SCRIPT_DIR}/yoctoTizen_config ] ;then
-    cp  ${SCRIPT_DIR}/yoctoTizen_config_skeleton ${SCRIPT_DIR}/yoctoTizen_config
-fi
-source ${SCRIPT_DIR}/yoctoTizen_config
 
 test_parameter() {
-    if [ -z $2 ] ;then
+    if [ -z "$2" ] ;then
         echo The variable \"$1\" is empty please configure it.
-        echo Open file ${SCRIPT_DIR}/yoctoTizen_config
+        echo Open file "${SCRIPT_DIR}"/yoctoTizen_config
         exit 1
     fi
 }
 
-if [ -z ${SSH_COMMAND} ] ; then
-    test_parameter REMOTE_USER ${REMOTE_USER}
-    test_parameter REMOTE_HOST ${REMOTE_HOST}
+if [ -z "${SSH_COMMAND}" ] ; then
+    test_parameter REMOTE_USER "${REMOTE_USER}"
+    test_parameter REMOTE_HOST "${REMOTE_HOST}"
 fi
 
-test_parameter WORKINGDIR ${WORKINGDIR}
-test_parameter BUILD_PRJ ${BUILD_PRJ}
-test_parameter MACHINE ${MACHINE}
-test_parameter IMAGE_NAME ${IMAGE_NAME}
+test_parameter WORKINGDIR "${WORKINGDIR}"
+test_parameter BUILD_PRJ "${BUILD_PRJ}"
+test_parameter MACHINE "${MACHINE}"
+test_parameter IMAGE_NAME "${IMAGE_NAME}"
 
-if [ -z ${DEPLOY_DIR} ]; then
-    DEPLOY_DIR=${WORKINGDIR}/poky/${BUILD_PRJ}/tmp/deploy/images/${MACHINE}
-    IMAGE_FILE=${DEPLOY_DIR}/${IMAGE_NAME}-${MACHINE}.ext3
-    KERNEL_FILE=${DEPLOY_DIR}/bzImage
+if [ -z "${DEPLOY_DIR}" ]; then
+    DEPLOY_DIR="${WORKINGDIR}/poky/${BUILD_PRJ}/tmp/deploy/images/${MACHINE}"
+    IMAGE_FILE="${DEPLOY_DIR}/${IMAGE_NAME}-${MACHINE}.ext3"
+    KERNEL_FILE="${DEPLOY_DIR}/bzImage"
 else
-    if [ ! -d ${DEPLOY_DIR} ]; then
+    if [ ! -d "${DEPLOY_DIR}" ]; then
         echo \"${DEPLOY_DIR}\" is not a path directory.
         exit 1
     fi
-    if [ $(find ${DEPLOY_DIR} -type f -name *.ext3 | wc -l) -eq 0 ]; then
+    if [ $(find "${DEPLOY_DIR}" -type f -name *.ext3 | wc -l) -eq 0 ]; then
         echo Can\'t find any file \".ext3\" into directory \"${DEPLOY_DIR}\".
         exit 1
     fi
-    if [ $(find ${DEPLOY_DIR} -type f -name *.ext3 | wc -l) -ne 1 ]; then
+    if [ $(find "${DEPLOY_DIR}" -type f -name *.ext3 | wc -l) -ne 1 ]; then
         echo Too many files \".ext3\" into directory \"${DEPLOY_DIR}\".
         exit 1
     fi
-    IMAGE_FILE=$(ls  ${DEPLOY_DIR}/*.ext3)
-    KERNEL_FILE=${DEPLOY_DIR}/bzImage
+    IMAGE_FILE=$(ls  "${DEPLOY_DIR}/*.ext3")
+    KERNEL_FILE="${DEPLOY_DIR}/bzImage"
 fi
 
-if [ ! -f ${IMAGE_FILE} ]; then
+if [ ! -f "${IMAGE_FILE}" ]; then
     echo Can\'t find image file \"${IMAGE_FILE}\"
     exit 1
 fi
 
-if [ ! -f ${KERNEL_FILE} ]; then
+if [ ! -f "${KERNEL_FILE}" ]; then
     echo Can\'t find kernel file \"${KERNEL_FILE}\"
     exit 1
 fi
 
 if [ "${VERBOSE}" = "yes" ] ; then
-    echo IMAGE_FILE:  ${IMAGE_FILE}
-    echo KERNEL_FILE: ${KERNEL_FILE}
+    echo IMAGE_FILE:  "${IMAGE_FILE}"
+    echo KERNEL_FILE: "${KERNEL_FILE}"
     set -x
 fi
 
-if [ ! -z ${SSH_COMMAND} ]; then
-    $(${SSH_COMMAND}) mkdir -p ${REMOTE_WORKINGDIR_DOWNLOADS}
-    scp ${IMAGE_FILE} ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_WORKINGDIR_DOWNLOADS}
-    scp ${KERNEL_FILE} ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_WORKINGDIR_DOWNLOADS}
+if [ ! -z "${SSH_COMMAND}" ]; then
+    ${SSH_COMMAND} mkdir -p "${REMOTE_WORKINGDIR_DOWNLOADS}"
+    scp "${IMAGE_FILE}" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_WORKINGDIR_DOWNLOADS}"
+    scp "${KERNEL_FILE}" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_WORKINGDIR_DOWNLOADS}"
 fi
 
 if [ $(${SSH_COMMAND} id -u) != 0 ] ; then
@@ -141,19 +143,19 @@ if [ $(${SSH_COMMAND} id -u) != 0 ] ; then
     exit 1
 fi
 
-$(${SSH_COMMAND}) rm -fr /yoctoTizen/*
-$(${SSH_COMMAND}) mkdir -p /mnt/YoctoTizen_EXT3
-$(${SSH_COMMAND}) mount ${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ext3  /mnt/YoctoTizen_EXT3
-$(${SSH_COMMAND}) cp -a /mnt/YoctoTizen_EXT3/*  /yoctoTizen
-$(${SSH_COMMAND}) umount /mnt/YoctoTizen_EXT3
-$(${SSH_COMMAND}) cp -aL ${REMOTE_WORKINGDIR_DOWNLOADS}/bzImage /boot/bzImage_yoctoTizen
+${SSH_COMMAND} rm -fr /yoctoTizen/*
+${SSH_COMMAND} mkdir -p /mnt/YoctoTizen_EXT3
+${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ext3"  /mnt/YoctoTizen_EXT3
+${SSH_COMMAND} cp -a /mnt/YoctoTizen_EXT3/*  /yoctoTizen
+${SSH_COMMAND} umount /mnt/YoctoTizen_EXT3
+${SSH_COMMAND} cp -aL "${REMOTE_WORKINGDIR_DOWNLOADS}/bzImage" /boot/bzImage_yoctoTizen
 
-$(${SSH_COMMAND}) sync
-$(${SSH_COMMAND}) sync
+${SSH_COMMAND} sync
+${SSH_COMMAND} sync
 
-if [ $1 = "reboot_after" ]; then
-    $(${SSH_COMMAND}) grub2-reboot ${REBOOT_ENTRY}
-    $(${SSH_COMMAND}) shutdown 0 --reboot
+if [ "${REBOOT_AFTER}" = "yes" ]; then
+    ${SSH_COMMAND} grub2-reboot "${REBOOT_ENTRY}"
+    ${SSH_COMMAND} shutdown 0 --reboot
 fi
 
 if [ ${VERBOSE} = "yes" ] ; then
