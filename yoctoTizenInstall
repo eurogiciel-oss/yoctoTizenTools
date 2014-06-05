@@ -21,7 +21,7 @@ DEPLOY_DIR=
 
 SCRIPT_DIR=$(dirname $0)
 
-# If user have no yoctoTizenrc
+# If script have no yoctoTizen_config
 if [ ! -e "${SCRIPT_DIR}"/yoctoTizen_config ] ;then
     cp  "${SCRIPT_DIR}"/yoctoTizen_config_skeleton "${SCRIPT_DIR}"/yoctoTizen_config
 fi
@@ -94,6 +94,7 @@ test_parameter WORKINGDIR "${WORKINGDIR}"
 test_parameter BUILD_PRJ "${BUILD_PRJ}"
 test_parameter MACHINE "${MACHINE}"
 test_parameter IMAGE_NAME "${IMAGE_NAME}"
+test_parameter YOCTO_PART "${YOCTO_PART}"
 
 if [ -z "${DEPLOY_DIR}" ]; then
     DEPLOY_DIR="${WORKINGDIR}/poky/${BUILD_PRJ}/tmp/deploy/images/${MACHINE}"
@@ -143,11 +144,11 @@ if [ $(${SSH_COMMAND} id -u) != 0 ] ; then
     exit 1
 fi
 
-${SSH_COMMAND} rm -fr /yoctoTizen/*
-${SSH_COMMAND} mkdir -p /mnt/YoctoTizen_EXT3
-${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ext3"  /mnt/YoctoTizen_EXT3
-${SSH_COMMAND} cp -a /mnt/YoctoTizen_EXT3/*  /yoctoTizen
-${SSH_COMMAND} umount /mnt/YoctoTizen_EXT3
+${SSH_COMMAND} rm -fr /${YOCTO_PART}/*
+${SSH_COMMAND} mkdir -p /mnt/${YOCTO_PART}_EXT3
+${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ext3"  /mnt/${YOCTO_PART}_EXT3
+${SSH_COMMAND} cp -a /mnt/${YOCTO_PART}_EXT3/*  /${YOCTO_PART}
+${SSH_COMMAND} umount /mnt/${YOCTO_PART}_EXT3
 ${SSH_COMMAND} cp -aL "${REMOTE_WORKINGDIR_DOWNLOADS}/bzImage" /boot/bzImage_yoctoTizen
 
 ${SSH_COMMAND} sync
