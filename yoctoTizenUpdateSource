@@ -190,6 +190,6 @@ fi
 echo "To build image:"
 echo "    #" cd ${WORKINGDIR}/poky
 echo "    #" source oe-init-build-env ${BUILD_PRJ}
-echo "    #" bitbake ${BUILD_PRJ}
+echo "    #" bitbake ${IMAGE_NAME}
 
 exit 0
