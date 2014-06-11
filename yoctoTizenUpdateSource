@@ -42,7 +42,7 @@ while test $# -gt 0; do
 done
 
 if [ ${SHOW_HELP} != "no" ]; then
-    echo "copy yocto image to partition"
+    echo "clone/checkout tizen on yocto source"
     echo "    --help,-h show this help"
     echo "    --verbose yes/no default yes"
     exit 0
@@ -142,22 +142,12 @@ cd ${WORKINGDIR}/meta-openembedded
 git reset --hard ${META_OPENEMBEDDED_REV}
 echo
 #----------------------------------------------------------------------------
-#Don't forget to add your ssh key
-#https://review.tizen.org/gerrit/#/settings/
-ssh ${YOUR_TIZEN_ID}@review.tizen.org -p 29418 gerrit version
-if [ $? -ne 0 ] ;then
-    echo Your Tizen git review account seems to be not configure,
-    echo please check your configuration
-    echo https://review.tizen.org/gerrit/#/settings/
-    exit 1
-fi
-
 if [ -d ${WORKINGDIR}/meta-tizen ] ; then
     cd ${WORKINGDIR}/meta-tizen
     git fetch --all
 else
     cd ${WORKINGDIR}
-    git ${CLONE_CMD} ssh://${YOUR_TIZEN_ID}@review.tizen.org:29418/scm/bb/meta-tizen meta-tizen
+    git ${CLONE_CMD} git://review.tizen.org/scm/bb/meta-tizen meta-tizen
 fi
 cd ${WORKINGDIR}/meta-tizen
 git reset --hard ${META_TIZEN_REV}
