@@ -150,12 +150,13 @@ ${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ex
 ${SSH_COMMAND} cp -a /mnt/${YOCTO_PART}_EXT3/*  /${YOCTO_PART}
 ${SSH_COMMAND} umount /mnt/${YOCTO_PART}_EXT3
 ${SSH_COMMAND} cp -aL "${REMOTE_WORKINGDIR_DOWNLOADS}/bzImage" /boot/bzImage_yoctoTizen
+${SSH_COMMAND} cp /etc/ssh/ssh_host_* /${YOCTO_PART}/etc/ssh/
 
 ${SSH_COMMAND} sync
 ${SSH_COMMAND} sync
 
 if [ "${REBOOT_AFTER}" = "yes" ]; then
-    ${SSH_COMMAND} grub2-reboot "${REBOOT_ENTRY}"
+    ${SSH_COMMAND} sed -i s@next_entry=.*@next_entry="${REBOOT_ENTRY}"@ /boot/grub2/grubenv
     ${SSH_COMMAND} shutdown 0 --reboot
 fi
 
