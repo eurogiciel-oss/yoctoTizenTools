@@ -95,7 +95,6 @@ else
 fi
 }
 
-test_parameter YOUR_TIZEN_ID ${YOUR_TIZEN_ID}
 test_parameter WORKINGDIR ${WORKINGDIR}
 mkdir -p ${WORKINGDIR}
 if [ $? -ne 0 ] ;then
