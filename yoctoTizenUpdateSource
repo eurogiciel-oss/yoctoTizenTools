@@ -54,8 +54,9 @@ SCRIPT_DIR=$(dirname $0)
 if [ ! -e ${SCRIPT_DIR}/yoctoTizen_config ] ;then
     cp  ${SCRIPT_DIR}/yoctoTizen_config_skeleton ${SCRIPT_DIR}/yoctoTizen_config
 fi
-source ${SCRIPT_DIR}/yoctoTizen_rev
+
 source ${SCRIPT_DIR}/yoctoTizen_config
+source ${SCRIPT_DIR}/yoctoTizen_rev
 
 test_parameter() {
     if [ -z $2 ] ;then
