@@ -65,7 +65,7 @@ REMOTE_WORKINGDIR_DOWNLOADS=/tmp
 # Default value is IMAGE_NAME=tizen-common-core-image-minimal-dev
 IMAGE_NAME=tizen-common-core-image-minimal-dev
 
-# The directory containing the poky project.
+# The parition on which Tizen will beinstalled.
 # Default value is YOCTO_PART=yoctoTizen
 YOCTO_PART=yoctoTizen
 
