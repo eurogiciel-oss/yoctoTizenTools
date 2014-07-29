@@ -14,26 +14,58 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
 
-#Default value is WORKINGDIR=${HOME}/yocto
+# The directory in which all needed git repository will be cloned and
+# were the image will be built.
+# Default value is WORKINGDIR=${HOME}/yocto
 WORKINGDIR=${HOME}/yocto
 
-#Default value is CLONE_CMD=clone
+# The git clone command to use
+# You can replace the default git clone command by the git cache cclone
+# command if you have a git cache server
+# (https://github.com/kooltux/git-cache), in this case the value
+# becomes: CLONE_CMD=cclone
+# Default value is CLONE_CMD=clone
 CLONE_CMD=clone
-#You can replace the git clone command by cache command
-#https://github.com/kooltux/git-cache
 
-#Default value is MACHINE=romley-ivb
+# MACHINE defines the BSP to use. The BSP should be used accordingly to
+# your target architecture
+# Default value is MACHINE=romley-ivb and is the one to use with the
+# VTC1010
 MACHINE=romley-ivb
-#Default value is BUILD_PRJ=build
+
+# Directory in which the image will be built. The created images and
+# every intermediary files will be found in this directory. This
+# directory will be created in ${WORKINGDIR}/poky.
+# Default value is BUILD_PRJ=build
 BUILD_PRJ=build
-#Default value is REMOTE_HOST=localhost
+
+# The IP address of the target machine (the machine on which Tizen will 
+# be installed).
+# Default value is REMOTE_HOST=localhost
 REMOTE_HOST=localhost
-#Default value is REMOTE_USER=root
+
+# The user to use to connect to the remote machine (or local machine if
+# ${REMOTE_HOST}=localhost)
+# Default value is REMOTE_USER=root
 REMOTE_USER=root
-#Default value is REBOOT_ENTRY="\"Yocto Tizen Common\""
+
+# The grub2 entry on which to reboot once the installation of Tizen is
+# finished. Note that the machine will automatically reboot only if the
+# option "--reboot_after" has been passed as a parameter to the install
+# script yoctoTizenInstall.
+# Default value is REBOOT_ENTRY="\"Yocto Tizen Common\""
 REBOOT_ENTRY="\"Yocto Tizen Common\""
+
+# The directory which will store the rootfs on the target before it is
+# installed.
+# default value is REMOTE_WORKINGDIR_DOWNLOADS=/tmp
 REMOTE_WORKINGDIR_DOWNLOADS=/tmp
-#Default value is IMAGE_NAME=tizen-common-core-image-minimal-dev
+
+# The image to build.
+# Default value is IMAGE_NAME=tizen-common-core-image-minimal-dev
 IMAGE_NAME=tizen-common-core-image-minimal-dev
-#Default value is YOCTO_PART=yoctoTizen
+
+# The parition on which Tizen will beinstalled.
+# Default value is YOCTO_PART=yoctoTizen
 YOCTO_PART=yoctoTizen
+
