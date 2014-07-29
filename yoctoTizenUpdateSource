@@ -80,6 +80,21 @@ else
 fi
 }
 
+function rm_meta_to_bblayers
+{
+echo
+META_DIR=$1
+BBLAYER_FILE=$2
+echo remove \"${META_DIR}\" to file ${BBLAYER_FILE}.
+if grep -q "${META_DIR} " "${BBLAYER_FILE}"; then
+        echo ${META_DIR} is present in ${BBLAYER_FILE} now remove it.
+        echo sed -i "/${META_DIR}/d" ${BBLAYER_FILE}
+        sed -i "/${META_DIR}/d" ${BBLAYER_FILE}
+else
+        echo ${META_DIR} is not present in ${BBLAYER_FILE}.
+fi
+}
+
 function change_conf_default_value
 {
 DEFAULT_VALUE=$1
@@ -155,34 +170,34 @@ git reset --hard ${META_TIZEN_REV}
 echo
 #----------------------------------------------------------------------------
 echo init build project
-if [ ! -d ${WORKINGDIR}/poky/${BUILD_PRJ} ]; then
-    cd ${WORKINGDIR}/poky
-    source oe-init-build-env ${BUILD_PRJ}
-    add_meta_to_bblayers ${WORKINGDIR}/meta-tizen "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-efl "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-oe "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-multimedia "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-ruby "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-    add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-systemd "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-    case ${MACHINE} in
-        haswell-wc)
-        add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-haswell-wc "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-        ;;
-        romley-ivb)
-        add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-romley "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-        ;;
-        valleyisland-64)
-        add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-        ;;
-    esac
-    add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+cd ${WORKINGDIR}/poky
+source oe-init-build-env ${BUILD_PRJ}
+  
+echo add and remove meta 
+echo --------------    
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+rm_meta_to_bblayers meta-efl "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-oe "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-multimedia "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-ruby "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-systemd "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 
-    change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
+echo --------------
 
-else
-    echo build project is all ready init
-fi
+case ${MACHINE} in
+    haswell-wc)
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-haswell-wc "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    ;;
+    romley-ivb)
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-romley "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    ;;
+    valleyisland-64)
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    ;;
+esac
+add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 
+change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 
 if [ ${VERBOSE} = "yes" ] ; then
     set +x
