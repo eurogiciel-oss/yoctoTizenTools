@@ -14,20 +14,21 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
 
+SCRIPT_DIR=$(dirname $0)
 REBOOT_AFTER="no"
 VERBOSE="yes"
 SHOW_HELP="no"
 DEPLOY_DIR=
+CONFIG_FILE=${SCRIPT_DIR}/yoctoTizen_config
 
-SCRIPT_DIR=$(dirname $0)
 
 # If script have no yoctoTizen_config
-if [ ! -e "${SCRIPT_DIR}"/yoctoTizen_config ] ;then
-    cp  "${SCRIPT_DIR}"/yoctoTizen_config_skeleton "${SCRIPT_DIR}"/yoctoTizen_config
+if [ ! -e "${CONFIG_FILE}" ] ;then
+    cp  "${SCRIPT_DIR}"/yoctoTizen_config_skeleton "${CONFIG_FILE}"
 fi
 source ${SCRIPT_DIR}/yoctoTizen_config
 
-SSH_COMMAND="ssh ${REMOTE_USER}@${REMOTE_HOST} -- "
+SSH_COMMAND="yes"
 
 while test $# -gt 0; do
   case $1 in
@@ -57,15 +58,28 @@ while test $# -gt 0; do
       shift
       shift
     ;;
+    *-config)
+      CONFIG_FILE=$2
+      shift
+      shift
+    ;;
     *)
       echo "Unknown parameter $1."
       echo "This script is not accepting this parameter currently."
       exit 1
     ;;
   esac
-  shift
 done
 
+# If script have no yoctoTizen_config
+if [ ! -e "${CONFIG_FILE}" ] ;then
+    cp  "${SCRIPT_DIR}"/yoctoTizen_config_skeleton "${CONFIG_FILE}"
+fi
+source ${CONFIG_FILE}
+
+if [ "${SSH_COMMAND}" = "yes" ]; then
+    SSH_COMMAND="ssh ${REMOTE_USER}@${REMOTE_HOST} -- "
+fi
 if [ "${SHOW_HELP}" != "no" ]; then
     echo "copy yocto image to partition"
     echo "    --help,-h show this help"
@@ -73,6 +87,7 @@ if [ "${SHOW_HELP}" != "no" ]; then
     echo "    --image_src_dir use alternative directory source for image/kernel files"
     echo "    --reboot_after reboot target after copy"
     echo "    --verbose yes/no default yes"
+    echo "    --config  file_path   use a external config file"
     exit 0
 fi
 

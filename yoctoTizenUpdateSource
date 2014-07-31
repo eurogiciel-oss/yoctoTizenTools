@@ -14,8 +14,13 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
 
-VERBOSE="yes"
+SCRIPT_DIR=$(dirname $0)
+VERBOSE="no"
 SHOW_HELP="no"
+CLEAN_PRJ="no"
+BUILD_PRJ_AFTER="no"
+CONFIG_FILE=${SCRIPT_DIR}/yoctoTizen_config
+REV_FILE=
 
 while test $# -gt 0; do
   case $1 in
@@ -27,8 +32,26 @@ while test $# -gt 0; do
       SHOW_HELP="yes"
       shift
     ;;
+    *-clean-force)
+      CLEANPRJ="yes"
+      shift
+    ;;
+    *-build)
+      BUILD_PRJ_AFTER="yes"
+      shift
+    ;;
     *-verbose)
       VERBOSE=$2
+      shift
+      shifti
+    ;;
+    *-config)
+      CONFIG_FILE=$2
+      shift
+      shift
+    ;;
+    *-rev-file)
+      REV_FILE=$2
       shift
       shift
     ;;
@@ -38,25 +61,37 @@ while test $# -gt 0; do
       exit 1
     ;;
   esac
-  shift
 done
 
 if [ ${SHOW_HELP} != "no" ]; then
     echo "clone/checkout tizen on yocto source"
-    echo "    --help,-h show this help"
-    echo "    --verbose yes/no default yes"
+    echo "    --help,-h       show this help"
+    echo "    --verbose       yes/no default yes"
+    echo "    --clean-force   remove previous build without any chance of recovery,"
+    echo "                    use this option at your own risk"
+    echo "    --config file_path"
+    echo "                    use a external config file (default ${SCRIPT_DIR}/yoctoTizen_config)"
+    echo "    --rev-file file_path"
+    echo "                    specify the revision file (not optional)"
+    echo "    --build         build project after fetch"
     exit 0
 fi
 
-SCRIPT_DIR=$(dirname $0)
 
 # If user have no yoctoTizenrc
-if [ ! -e ${SCRIPT_DIR}/yoctoTizen_config ] ;then
-    cp  ${SCRIPT_DIR}/yoctoTizen_config_skeleton ${SCRIPT_DIR}/yoctoTizen_config
+if [ ! -e ${CONFIG_FILE} ] ;then
+    cp  ${SCRIPT_DIR}/yoctoTizen_config_skeleton ${CONFIG_FILE}
 fi
 
-source ${SCRIPT_DIR}/yoctoTizen_config
-source ${SCRIPT_DIR}/yoctoTizen_rev
+source ${CONFIG_FILE}
+
+if [ -z ${REV_FILE} ] ; then 
+    echo "You have not specify the revision file,"
+    echo "     You can chooce default file (--rev-file file_path):"
+    echo $(ls ${SCRIPT_DIR}/yoctoTizen_rev*)
+    exit 1
+fi
+source ${REV_FILE}
 
 test_parameter() {
     if [ -z $2 ] ;then
@@ -199,13 +234,28 @@ add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/c
 
 change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 
+if [ ${CLEANPRJ} = "yes" ] ; then
+    echo "Clean directory"
+    for path in bitbake.lock cache downloads sstate-cache tmp ; do
+        rm -fr ${WORKINGDIR}/poky/${BUILD_PRJ}/${path}
+    done
+fi
+
+
 if [ ${VERBOSE} = "yes" ] ; then
     set +x
 fi
 
-echo "To build image:"
-echo "    " cd ${WORKINGDIR}/poky
-echo "    " source oe-init-build-env ${BUILD_PRJ}
-echo "    " bitbake ${IMAGE_NAME}
+if [ ${BUILD_PRJ_AFTER} = "yes" ] ; then
+    echo "Build image:"
+    cd ${WORKINGDIR}/poky
+    source oe-init-build-env ${BUILD_PRJ}
+    bitbake -k ${IMAGE_NAME}
+else
+    echo "To build image:"
+    echo "    " cd ${WORKINGDIR}/poky
+    echo "    " source oe-init-build-env ${BUILD_PRJ}
+    echo "    " bitbake ${IMAGE_NAME}
+fi
 
 exit 0

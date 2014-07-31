@@ -29,9 +29,9 @@ CLONE_CMD=clone
 
 # MACHINE defines the BSP to use. The BSP should be used accordingly to
 # your target architecture
-# Default value is MACHINE=romley-ivb and is the one to use with the
-# VTC1010
-MACHINE=romley-ivb
+# Default value is MACHINE=genericx86-64
+# haswell-wc, romley-ivb, valleyisland-64, qemux86, qemux86-64, qemuarm, genericx86, genericx86-64
+MACHINE=genericx86-64
 
 # Directory in which the image will be built. The created images and
 # every intermediary files will be found in this directory. This
