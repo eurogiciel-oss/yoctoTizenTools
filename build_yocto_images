@@ -1,0 +1,16 @@
+DIR_TOOL=$(dirname ${BASH_SOURCE[0]})
+YTUS=${DIR_TOOL}/yoctoTizenUpdateSource
+REV_FILE=${DIR_TOOL}/yoctoTizen_rev_head
+
+for prj_conf in TizenCommon_config_genericx86      \
+                TizenCommon_config_genericx86-64      \
+                TizenCommon_config_qemux86 \
+                TizenIVI_Modello_config_genericx86      \
+                TizenIVI_Modello_config_genericx86-64   \
+                TizenIVI_Modello_config_qemux86   \
+                TizenIVI_ICO_config_genericx86         \
+                TizenIVI_ICO_config_genericx86-64         \
+                TizenIVI_ICO_config_qemux86      \
+                ; do
+    ${YTUS} --clean-force --config ${DIR_TOOL}/${prj_conf} --rev-file ${REV_FILE} --build
+done
