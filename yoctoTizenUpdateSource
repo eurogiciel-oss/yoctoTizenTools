@@ -229,6 +229,9 @@ case ${MACHINE} in
     valleyisland-64)
     add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
     ;;
+    valleyisland-32)
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    ;;
 esac
 add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 
