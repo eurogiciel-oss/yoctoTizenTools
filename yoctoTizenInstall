@@ -162,7 +162,7 @@ fi
 ${SSH_COMMAND} rm -fr /${YOCTO_PART}/*
 ${SSH_COMMAND} mkdir -p /mnt/${YOCTO_PART}_EXT3
 ${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ext3"  /mnt/${YOCTO_PART}_EXT3
-${SSH_COMMAND} cp -a /mnt/${YOCTO_PART}_EXT3/*  /${YOCTO_PART}
+${SSH_COMMAND} cp -ar  /mnt/${YOCTO_PART}_EXT3/*  /${YOCTO_PART}
 ${SSH_COMMAND} umount /mnt/${YOCTO_PART}_EXT3
 ${SSH_COMMAND} cp -aL "${REMOTE_WORKINGDIR_DOWNLOADS}/bzImage" /boot/bzImage_yoctoTizen
 ${SSH_COMMAND} cp /etc/ssh/ssh_host_* /${YOCTO_PART}/etc/ssh/
