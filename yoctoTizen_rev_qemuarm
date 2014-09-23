@@ -1,0 +1,20 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+#
+# Copyright (c) 2012-2013 Intel, Inc.
+# License: GPLv2
+# Authors: Ronan Le Martret <ronan.lemartret@open.eurogiciel.org>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License, version 2,
+# as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+
+POKY_REV=faa50171a19a59600f6ac4ec124689bdc0cc1c48
+META_INTEL_REV=c249763d3cb92bd06742b7986f08cf844ddb1d51
+META_TIZEN_REV=1a84eeb7cf804101046d79f848059f8eca23e367
+META_OPENEMBEDDED_REV=321c808a57e657c857dfe412d3c09839ebac27f1
