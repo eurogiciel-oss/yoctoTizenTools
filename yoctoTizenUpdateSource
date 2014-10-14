@@ -19,7 +19,7 @@ VERBOSE="no"
 SHOW_HELP="no"
 CLEAN_PRJ="no"
 BUILD_PRJ_AFTER="no"
-CONFIG_FILE=${SCRIPT_DIR}/yoctoTizen_config
+CONFIG_FILE="${SCRIPT_DIR}/yoctoTizen_config"
 REV_FILE=
 
 while test $# -gt 0; do
@@ -33,7 +33,7 @@ while test $# -gt 0; do
       shift
     ;;
     *-clean-force)
-      CLEANPRJ="yes"
+      CLEAN_PRJ="yes"
       shift
     ;;
     *-build)
@@ -63,7 +63,7 @@ while test $# -gt 0; do
   esac
 done
 
-if [ ${SHOW_HELP} != "no" ]; then
+if [ "${SHOW_HELP}" != "no" ]; then
     echo "clone/checkout tizen on yocto source"
     echo "    --help,-h       show this help"
     echo "    --verbose       yes/no default yes"
@@ -79,8 +79,8 @@ fi
 
 
 # If user have no yoctoTizenrc
-if [ ! -e ${CONFIG_FILE} ] ;then
-    cp  ${SCRIPT_DIR}/yoctoTizen_config_skeleton ${CONFIG_FILE}
+if [ ! -e "${CONFIG_FILE}" ] ;then
+    cp  "${SCRIPT_DIR}/yoctoTizen_config_skeleton" "${CONFIG_FILE}"
 fi
 
 source ${CONFIG_FILE}
@@ -88,7 +88,7 @@ source ${CONFIG_FILE}
 if [ -z ${REV_FILE} ] ; then 
     echo "You have not specify the revision file,"
     echo "     You can chooce default file (--rev-file file_path):"
-    echo $(ls ${SCRIPT_DIR}/yoctoTizen_rev*)
+    echo $(ls "${SCRIPT_DIR}/yoctoTizen_rev"*)
     exit 1
 fi
 source ${REV_FILE}
@@ -160,52 +160,52 @@ if [ "${VERBOSE}" = "yes" ] ; then
     set -x
 fi
 #----------------------------------------------------------------------------
-if [ -d ${WORKINGDIR}/poky ] ; then
-    cd ${WORKINGDIR}/poky
+if [ -d "${WORKINGDIR}/poky" ] ; then
+    cd "${WORKINGDIR}/poky"
     git fetch --all
 else
-    cd ${WORKINGDIR}
+    cd "${WORKINGDIR}"
     git ${CLONE_CMD} https://github.com/eurogiciel-oss/poky.git poky
 fi
 cd ${WORKINGDIR}/poky
 git reset --hard ${POKY_REV}
 echo
 #----------------------------------------------------------------------------
-if [ -d ${WORKINGDIR}/meta-intel ] ; then
-    cd ${WORKINGDIR}/meta-intel
+if [ -d "${WORKINGDIR}/meta-intel" ] ; then
+    cd "${WORKINGDIR}/meta-intel"
     git fetch --all
 else
-    cd ${WORKINGDIR}
+    cd "${WORKINGDIR}"
     git ${CLONE_CMD} git://git.yoctoproject.org/meta-intel meta-intel
 fi
-cd ${WORKINGDIR}/meta-intel
+cd "${WORKINGDIR}/meta-intel"
 git reset --hard ${META_INTEL_REV}
 echo
 #----------------------------------------------------------------------------
-if [ -d ${WORKINGDIR}/meta-openembedded ] ; then
-    cd ${WORKINGDIR}/meta-openembedded
+if [ -d "${WORKINGDIR}/meta-openembedded" ] ; then
+    cd "${WORKINGDIR}/meta-openembedded"
     git fetch --all
 else
-    cd ${WORKINGDIR}
+    cd "${WORKINGDIR}"
     git ${CLONE_CMD} git://git.openembedded.org/meta-openembedded meta-openembedded
 fi
-cd ${WORKINGDIR}/meta-openembedded
+cd "${WORKINGDIR}/meta-openembedded"
 git reset --hard ${META_OPENEMBEDDED_REV}
 echo
 #----------------------------------------------------------------------------
-if [ -d ${WORKINGDIR}/meta-tizen ] ; then
-    cd ${WORKINGDIR}/meta-tizen
+if [ -d "${WORKINGDIR}/meta-tizen" ] ; then
+    cd "${WORKINGDIR}/meta-tizen"
     git fetch --all
 else
-    cd ${WORKINGDIR}
+    cd "${WORKINGDIR}"
     git ${CLONE_CMD} git://review.tizen.org/scm/bb/meta-tizen meta-tizen
 fi
-cd ${WORKINGDIR}/meta-tizen
+cd "${WORKINGDIR}/meta-tizen"
 git reset --hard ${META_TIZEN_REV}
 echo
 #----------------------------------------------------------------------------
 echo init build project
-cd ${WORKINGDIR}/poky
+cd "${WORKINGDIR}/poky"
 source oe-init-build-env ${BUILD_PRJ}
   
 echo add and remove meta 
@@ -237,23 +237,23 @@ add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/c
 
 change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 
-if [ ${CLEANPRJ} = "yes" ] ; then
+if [ "${CLEAN_PRJ}" = "yes" ] ; then
     echo "Clean directory"
     for path in bitbake.lock cache downloads sstate-cache tmp ; do
-        rm -fr ${WORKINGDIR}/poky/${BUILD_PRJ}/${path}
+        rm -fr "${WORKINGDIR}/poky/${BUILD_PRJ}/${path}"
     done
 fi
 
 
-if [ ${VERBOSE} = "yes" ] ; then
+if [ "${VERBOSE}" = "yes" ] ; then
     set +x
 fi
 
-if [ ${BUILD_PRJ_AFTER} = "yes" ] ; then
+if [ "${BUILD_PRJ_AFTER}" = "yes" ] ; then
     echo "Build image:"
-    cd ${WORKINGDIR}/poky
+    cd "${WORKINGDIR}/poky"
     source oe-init-build-env ${BUILD_PRJ}
-    bitbake -k ${IMAGE_NAME}
+    bitbake -k "${IMAGE_NAME}"
 else
     echo "To build image:"
     echo "    " cd ${WORKINGDIR}/poky
