@@ -21,6 +21,7 @@ CLEAN_PRJ="no"
 BUILD_PRJ_AFTER="no"
 CONFIG_FILE="${SCRIPT_DIR}/yoctoTizen_config"
 REV_FILE=
+CLEANPRJ="no"
 
 while test $# -gt 0; do
   case $1 in
