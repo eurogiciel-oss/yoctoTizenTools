@@ -21,6 +21,7 @@ CLEAN_PRJ="no"
 BUILD_PRJ_AFTER="no"
 CONFIG_FILE=${SCRIPT_DIR}/yoctoTizen_config
 REV_FILE=
+CLEANPRJ="no"
 
 while test $# -gt 0; do
   case $1 in
@@ -165,7 +166,7 @@ if [ -d ${WORKINGDIR}/poky ] ; then
     git fetch --all
 else
     cd ${WORKINGDIR}
-    git ${CLONE_CMD} https://github.com/eurogiciel-oss/poky.git poky
+    git ${CLONE_CMD} git://git.yoctoproject.org/poky.git poky
 fi
 cd ${WORKINGDIR}/poky
 git reset --hard ${POKY_REV}

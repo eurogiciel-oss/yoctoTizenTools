@@ -15,7 +15,7 @@
 # General Public License for more details.
 
 POKY_REV=origin/tizen
-META_INTEL_REV=c249763d3cb92bd06742b7986f08cf844ddb1d51
+META_INTEL_REV=origin/master
 META_TIZEN_REV=origin/tizen
-META_OPENEMBEDDED_REV=321c808a57e657c857dfe412d3c09839ebac27f1
+META_OPENEMBEDDED_REV=origin/master
 
