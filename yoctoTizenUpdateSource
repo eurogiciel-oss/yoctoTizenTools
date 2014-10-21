@@ -166,7 +166,7 @@ if [ -d "${WORKINGDIR}/poky" ] ; then
     git fetch --all
 else
     cd "${WORKINGDIR}"
-    git ${CLONE_CMD} https://github.com/eurogiciel-oss/poky.git poky
+    git ${CLONE_CMD} git://git.yoctoproject.org/poky poky
 fi
 cd ${WORKINGDIR}/poky
 git reset --hard ${POKY_REV}
