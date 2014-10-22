@@ -6,28 +6,16 @@
  <!-- YOCTO FIX -->
  
  <!-- Merged NOT submitted On IVI-->
-
- <!-- Merged NOT submitted On Common-->
- <!-- pulseaudio-module-murphy-ivi https://review.tizen.org/gerrit/28320 -->
- <project name="profile/ivi/pulseaudio-module-murphy-ivi"  revision="b81902a13e47d93f066bb130c928d831cfe53beb" />
- <!-- pulseaudio https://review.tizen.org/gerrit/28453 -->
- <project name="platform/upstream/pulseaudio"  revision="c91f47e3d11e72bf583f7d84643a9d768c168684" />
- <!-- libgsignon-glib https://review.tizen.org/gerrit/25406 -->
- <project name="platform/upstream/libgsignon-glib"  revision="09502b1c5ce5f901be78bbae6eea19606252abc0" />
  <!-- lemolo https://review.tizen.org/gerrit/28310 -->
  <project name="profile/ivi/lemolo" revision="b04fcc0601b9b7d9e0bc1d90d23a4166ce3fa6a6" />
- <!-- ico-uxf-weston-plugin https://review.tizen.org/gerrit/28311 -->
- <project name="profile/ivi/ico-uxf-weston-plugin" revision="240f812897b4191589ae87e3d8bc45b7117e5026" />
- <!-- ico-vic-amb-plugin https://review.tizen.org/gerrit/28311 -->
- <project name="profile/ivi/ico-vic-amb-plugin" revision="02ef0382aa81212de4246c6e6074eb10c678007f" />
+ 
+ <!-- Merged NOT submitted On Common-->
  <!-- gsignond-plugin-sasl https://review.tizen.org/gerrit/28162 -->
  <project name="platform/upstream/gsignond-plugin-sasl" revision="74233b7793f7f012aaeb3118694f7dfbe35f0d38" />
  <!-- gsignond-plugin-oauth https://review.tizen.org/gerrit/28163 -->
  <project name="platform/upstream/gsignond-plugin-oauth" revision="8dddc2078d70cc193189e02d07f66f75fc828843" />
  <!-- app-core https://review.tizen.org/gerrit/27752 -->
  <project name="platform/core/appfw/app-core"  revision="d86d0066b93cf402badc408de591e54d6db6c164" />
- <!-- ail https://review.tizen.org/gerrit/#/c/28348/ -->  
- <project name="platform/core/appfw/ail"  revision="e252503f15cb8c3d3401178f926762498ab9aedb" />
  
  <!-- +2 but not merge -->
 
