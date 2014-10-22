@@ -1,78 +1,78 @@
 adns	meta-tizen-common-base/recipes-support
-ail	meta-tizen-common-base/recipes-ApplicationFramework
-alarm-manager	meta-tizen-common-base/recipes-ApplicationFramework
+ail	meta-tizen-common-base/recipes-application-framework
+alarm-manager	meta-tizen-common-base/recipes-application-framework
 alsa-scenario	meta-tizen-common-base/recipes-multimedia
-app-checker	meta-tizen-common-base/recipes-ApplicationFramework
-app-core	meta-tizen-common-base/recipes-ApplicationFramework
-appcore-agent	meta-tizen-common-base/recipes-ApplicationFramework
-app-svc	meta-tizen-common-base/recipes-ApplicationFramework
+app-checker	meta-tizen-common-base/recipes-application-framework
+app-core	meta-tizen-common-base/recipes-application-framework
+appcore-agent	meta-tizen-common-base/recipes-application-framework
+app-svc	meta-tizen-common-base/recipes-application-framework
 audio-session-manager	meta-tizen-common-base/recipes-multimedia
-aul	meta-tizen-common-base/recipes-ApplicationFramework
+aul	meta-tizen-common-base/recipes-application-framework
 automotive-message-broker	meta-tizen-ivi/recipes-extended
-avsystem
-badge
+avsystem	meta-tizen-common-base/recipes-multimedia
+badge	meta-tizen-common-base/recipes-application-framework
 bluetooth-frwk	meta-tizen-common-base/recipes-connectivity
 bluetooth-tools	meta-tizen-common-base/recipes-connectivity
-bullet
-bundle
+bullet	meta-tizen-common-base/recipes-core
+bundle	meta-tizen-common-base/recipes-connectivity
 ca-certificates-tizen	meta-tizen-common-base/recipes-support
-calendar-service
-capi-appfw-application	meta-tizen-common-base/recipes-ApplicationFramework
-capi-appfw-app-manager	meta-tizen-common-base/recipes-ApplicationFramework
-capi-appfw-package-manager	meta-tizen-common-base/recipes-ApplicationFramework
-capi-base-common	meta-tizen-common-base/recipes-ApplicationFramework
-capi-content-media-content	meta-tizen-common-base/recipes-ApplicationFramework
-capi-location-manager	meta-tizen-common-base/recipes-ApplicationFramework
-capi-media-image-util	meta-tizen-common-base/recipes-ApplicationFramework
-capi-media-sound-manager	meta-tizen-common-base/recipes-ApplicationFramework
-capi-media-wav-player	meta-tizen-common-base/recipes-ApplicationFramework
-capi-network-bluetooth	meta-tizen-common-base/recipes-ApplicationFramework
-capi-network-connection	meta-tizen-common-base/recipes-ApplicationFramework
-capi-network-nfc	meta-tizen-common-base/recipes-ApplicationFramework
-capi-network-tethering	meta-tizen-common-base/recipes-ApplicationFramework
-capi-network-wifi	meta-tizen-common-base/recipes-ApplicationFramework
-capi-system-device	meta-tizen-common-base/recipes-ApplicationFramework
-capi-system-info	meta-tizen-common-base/recipes-ApplicationFramework
-capi-system-power	meta-tizen-common-base/recipes-ApplicationFramework
-capi-system-runtime-info	meta-tizen-common-base/recipes-ApplicationFramework
-capi-system-sensor	meta-tizen-common-base/recipes-ApplicationFramework
-capi-system-system-settings	meta-tizen-common-base/recipes-ApplicationFramework
-capi-web-favorites	meta-tizen-common-base/recipes-ApplicationFramework
-capi-web-url-download	meta-tizen-common-base/recipes-ApplicationFramework
-CommonAPI
-CommonAPI-DBus
-contacts-service
+calendar-service	meta-tizen-common-base/recipes-social
+capi-appfw-application	meta-tizen-common-base/recipes-application-framework
+capi-appfw-app-manager	meta-tizen-common-base/recipes-application-framework
+capi-appfw-package-manager	meta-tizen-common-base/recipes-application-framework
+capi-base-common	meta-tizen-common-base/recipes-application-framework
+capi-content-media-content	meta-tizen-common-base/recipes-application-framework
+capi-location-manager	meta-tizen-common-base/recipes-application-framework
+capi-media-image-util	meta-tizen-common-base/recipes-application-framework
+capi-media-sound-manager	meta-tizen-common-base/recipes-application-framework
+capi-media-wav-player	meta-tizen-common-base/recipes-application-framework
+capi-network-bluetooth	meta-tizen-common-base/recipes-application-framework
+capi-network-connection	meta-tizen-common-base/recipes-application-framework
+capi-network-nfc	meta-tizen-common-base/recipes-application-framework
+capi-network-tethering	meta-tizen-common-base/recipes-application-framework
+capi-network-wifi	meta-tizen-common-base/recipes-application-framework
+capi-system-device	meta-tizen-common-base/recipes-application-framework
+capi-system-info	meta-tizen-common-base/recipes-application-framework
+capi-system-power	meta-tizen-common-base/recipes-application-framework
+capi-system-runtime-info	meta-tizen-common-base/recipes-application-framework
+capi-system-sensor	meta-tizen-common-base/recipes-application-framework
+capi-system-system-settings	meta-tizen-common-base/recipes-application-framework
+capi-web-favorites	meta-tizen-common-base/recipes-application-framework
+capi-web-url-download	meta-tizen-common-base/recipes-application-framework
+CommonAPI	meta-tizen-ivi/recipes-automotive
+CommonAPI-DBus	meta-tizen-ivi/recipes-automotive
+contacts-service	meta-tizen-common-base/recipes-social
 crosswalk	meta-crosswalk/recipes-crosswalk
 dbus-python	meta-tizen-common-base/recipes-core
-default-ac-domains
-desktop-file-utils
-desktop-skin
-dlog
+default-ac-domains	meta-tizen-common-base/recipes-security
+desktop-file-utils	meta-tizen-common-base/recipes-core
+desktop-skin	meta-tizen-common/recipes-multimedia
+dlog	meta-tizen-common-base/recipes-core
 dlt	meta-tizen-ivi/recipes-extended
-download-provider
-doxygen
-drm-client
+download-provider	meta-tizen-common-base/recipes-connectivity
+doxygen	meta-tizen-common-base/recipes-devtools
+drm-client	meta-tizen-common-base/recipes-graphics
 ecryptfs-utils	meta-tizen-ivi/recipes-support-ivi
 edbus	meta-tizen-common-base/recipes-efl
 efl	meta-tizen-common-base/recipes-efl
-efl-theme-tizen-hd
+efl-theme-tizen-hd	meta-tizen-common-base/recipes-efl
 elementary	meta-tizen-common-base/recipes-efl
-evolution-data-server
-fdupes
+evolution-data-server	meta-tizen-common-base/recipes-social
+fdupes	meta-tizen-common-base/recipes-devtools
 festival	meta-tizen-common-base/recipes-extended
-gcr
+gcr	meta-tizen-common-base/recipes-security
 genivi-audio-manager	meta-tizen-ivi/recipes-multimedia
 genivi-shell	meta-tizen-ivi/recipes-graphics
-gobject-introspection
-gpg2
-gsignond
-gsignond-plugin-oauth
-gsignond-plugin-sasl
-heynoti
-hwdata
-ibus
-ibus-hangul
-ibus-libpinyin
+gobject-introspection	meta-tizen-common-base/recipes-devtools
+gpg2	meta-tizen-common-base/recipes-security
+gsignond	meta-tizen-common-base/recipes-security
+gsignond-plugin-oauth	meta-tizen-common-base/recipes-security
+gsignond-plugin-sasl	meta-tizen-common-base/recipes-security
+heynoti	meta-tizen-common-base/recipes-application-framework
+hwdata	meta-tizen-common-base/recipes-core
+ibus	meta-tizen-ivi/recipes-graphics
+ibus-hangul	meta-tizen-ivi/recipes-graphics
+ibus-libpinyin	meta-tizen-ivi/recipes-graphics
 ico-uxf-device-input-controller	meta-tizen-ivi/recipes-ico
 ico-uxf-homescreen	meta-tizen-ivi/recipes-ico
 ico-uxf-homescreen-sample-apps	meta-tizen-ivi/recipes-ico
@@ -80,19 +80,19 @@ ico-uxf-utilities	meta-tizen-ivi/recipes-ico
 ico-uxf-weston-plugin	meta-tizen-ivi/recipes-ico
 ico-vic-amb-plugin	meta-tizen-ivi/recipes-ico
 ico-vic-carsimulator	meta-tizen-ivi/recipes-ico
-iniparser
+iniparser	meta-tizen-common-base/recipes-core
 keyutils	meta-tizen-ivi/recipes-support-ivi
-lemolo
-libaccounts-svc
+lemolo	meta-tizen-common-base/recipes-efl
+libaccounts-svc	meta-tizen-common-base/recipes-social
 libav	meta-tizen-common-base/recipes-multimedia
-libcom-core
-libdevice-node
+libcom-core	meta-tizen-common-base/recipes-application-framework
+libdevice-node	meta-tizen-common-base/recipes-core
 libdrm	meta-tizen-common-base/recipes-graphics
-libfeedback
-libgsasl
-libgsignon-glib
-libhangul
-libiri
+libfeedback	meta-tizen-common-base/recipes-core
+libgsasl	meta-tizen-common-base/recipes-security
+libgsignon-glib	meta-tizen-common-base/recipes-security
+libhangul	meta-tizen-ivi/recipes-graphics
+libiri	meta-tizen-common-base/recipes-core
 libjpeg-turbo	meta-tizen-common-base/recipes-core
 libmedia-service	meta-tizen-common-base/recipes-multimedia
 libmedia-thumbnail	meta-tizen-common-base/recipes-multimedia
@@ -104,28 +104,28 @@ libmm-session	meta-tizen-common-base/recipes-multimedia
 libmm-sound	meta-tizen-common-base/recipes-multimedia
 libmm-ta	meta-tizen-common-base/recipes-multimedia
 libmm-utility	meta-tizen-common-base/recipes-multimedia
-libnet-client
-libpinyin
-libprivilege-control
-librua
-libsecret
-libsf-common
+libnet-client	meta-tizen-common-base/recipes-connectivity
+libpinyin	meta-tizen-ivi/recipes-graphics
+libprivilege-control	meta-tizen-common-base/recipes-security
+librua	meta-tizen-common-base/recipes-application-framework
+libsecret	meta-tizen-common-base/recipes-security
+libsf-common	meta-tizen-common-base/recipes-core
 libslp-db-util	meta-tizen-common-base/recipes-applications
 libslp-location	meta-tizen-common-base/recipes-applications
 libslp-memo	meta-tizen-common-base/recipes-applications
 libslp-sysman	meta-tizen-common-base/recipes-applications
-libtapi
-libtapi3
-libtbm
-libwbxml2
-libwebsockets
-libwifi-direct
-libxml2
+libtapi	meta-tizen-common-base/recipes-telephony
+libtapi3	meta-tizen-common-base/recipes-telephony
+libtbm	meta-tizen-ivi/recipes-graphics
+libwbxml2	meta-tizen-common-base/recipes-core
+libwebsockets	meta-tizen-common/recipes-webframework
+libwifi-direct	meta-tizen-common-base/recipes-connectivity
+libxml2	meta-tizen-common-base/recipes-core
 lua	meta-tizen-common-base/recipes-devtools
-media-server
-message-port
-meta-common
-meta-generic
+media-server	meta-tizen-common-base/recipes-multimedia
+message-port	meta-tizen-common-base/recipes-application-framework
+meta-common	meta-tizen-common-base/recipes-devtools
+meta-generic	meta-tizen-common-base/recipes-devtools
 Modello-AMBSimulator	meta-tizen-ivi/recipes-modello
 Modello-Appmanager	meta-tizen-ivi/recipes-modello
 Modello-Common	meta-tizen-ivi/recipes-modello
@@ -137,52 +137,52 @@ Modello-Multimediaplayer	meta-tizen-ivi/recipes-modello
 Modello-Nav	meta-tizen-ivi/recipes-modello
 Modello-Phone	meta-tizen-ivi/recipes-modello
 Modello-SDL	meta-tizen-ivi/recipes-modello
-msg-service
+msg-service	meta-tizen-common-base/recipes-messaging
 murphy	meta-tizen-ivi/recipes-automotive
-neardal
-net-config
-nfc-manager-neard
-node-startup-controller
-notification
+neardal	meta-tizen-common-base/recipes-connectivity
+net-config	meta-tizen-common-base/recipes-connectivity
+nfc-manager-neard	meta-tizen-common-base/recipes-connectivity
+node-startup-controller	meta-tizen-ivi/recipes-automotive
+notification	meta-tizen-ivi/recipes-framework
 pam	meta-tizen-common-base/recipes-extended
-phoned
-pims-ipc
-pkgmgr
-pkgmgr-info
-privacy-manager-server
+phoned	meta-tizen-ivi/recipes-modello
+pims-ipc	meta-tizen-common-base/recipes-social
+pkgmgr	meta-tizen-common-base/recipes-application-framework
+pkgmgr-info	meta-tizen-common-base/recipes-application-framework
+privacy-manager-server	meta-tizen-common-base/recipes-security
 pulseaudio	meta-tizen-common-base/recipes-multimedia
 pulseaudio-module-murphy-ivi	meta-tizen-ivi/recipes-multimedia
-pwdutils
+pwdutils	meta-tizen-common-base/recipes-security
 python-libxml2	meta-tizen-common-base/recipes-core
-python-setuptools
+python-setuptools	meta-tizen-common-base/recipes-devtools
 rpm	meta-tizen-common-base/recipes-devtools
 rygel	meta-tizen-ivi/recipes-multimedia
-security-server
-sensor
+security-server	meta-tizen-common-base/recipes-security
+sensor	meta-tizen-common-base/recipes-core
 smack	meta-tizen-common-base/recipes-security
 sphinxbase	meta-tizen-common-base/recipes-extended/
-status
-sync-agent
-syspopup
+status	meta-tizen-common-base/recipes-application-framework
+sync-agent	meta-tizen-common-base/recipes-core
+syspopup	meta-tizen-common-base/recipes-application-framework
 systemd	meta-tizen-common-base/recipes-core
-system-server
-tdb
-tiff
+system-server	meta-tizen-common-base/recipes-core
+tdb	meta-tizen-common-baserecipes-devtools
+tiff	meta-tizen-common-base/recipes-multimedia
 tizen-extensions-crosswalk	meta-crosswalk/recipes-crosswalk
 tizen-platform-config	meta-tizen-common-base/recipes-core
 tizen-platform-wrapper	meta-tizen-common-base/recipes-core
-udev-rules
-update-desktop-files
-user-session-units
-uthash
+udev-rules	meta-tizen-common-base/recipes-core
+update-desktop-files	meta-tizen-common-base/recipes-application-framework
+user-session-units	meta-tizen-common-base/recipes-core
+uthash	meta-tizen-common-base/recipes-core
 vala	meta-tizen-common-base/recipes-devtools
-vconf
-vconf-internal-keys
-weekeyboard
+vconf	meta-tizen-common-base/recipes-application-framework
+vconf-internal-keys	meta-tizen-common-base/recipes-application-framework
+weekeyboard	meta-tizen-common-base/recipes-graphics
 weston	meta-tizen-common-base/recipes-graphics
 weston-common	meta-tizen-common/recipes-graphics
 weston-ivi	meta-tizen-ivi/recipes-graphics
 weston-ivi-shell	meta-tizen-ivi/recipes-graphics
-wrt-widgets
-xdgmime
-xmlsec1
+wrt-widgets	meta-tizen-common/recipes-webframework
+xdgmime	meta-tizen-common-base/recipes-core
+xmlsec1	meta-tizen-common-base/recipes-security
