@@ -1,4 +1,4 @@
-adns
+adns	meta-tizen-common-base/recipes-support
 ail	meta-tizen-common-base/recipes-ApplicationFramework
 alarm-manager
 alsa-scenario
@@ -11,39 +11,39 @@ aul
 automotive-message-broker
 avsystem
 badge
-bluetooth-frwk
-bluetooth-tools
+bluetooth-frwk	meta-tizen-common-base/recipes-connectivity
+bluetooth-tools	meta-tizen-common-base/recipes-connectivity
 bullet
 bundle
-ca-certificates-tizen
+ca-certificates-tizen	meta-tizen-common-base/recipes-support
 calendar-service
-capi-appfw-application
-capi-appfw-app-manager
-capi-appfw-package-manager
-capi-base-common
-capi-content-media-content
-capi-location-manager
-capi-media-image-util
-capi-media-sound-manager
-capi-media-wav-player
-capi-network-bluetooth
-capi-network-connection
-capi-network-nfc
-capi-network-tethering
-capi-network-wifi
-capi-system-device
-capi-system-info
-capi-system-power
-capi-system-runtime-info
-capi-system-sensor
-capi-system-system-settings
-capi-web-favorites
-capi-web-url-download
+capi-appfw-application	meta-tizen-common-base/recipes-ApplicationFramework
+capi-appfw-app-manager	meta-tizen-common-base/recipes-ApplicationFramework
+capi-appfw-package-manager	meta-tizen-common-base/recipes-ApplicationFramework
+capi-base-common	meta-tizen-common-base/recipes-ApplicationFramework
+capi-content-media-content	meta-tizen-common-base/recipes-ApplicationFramework
+capi-location-manager	meta-tizen-common-base/recipes-ApplicationFramework
+capi-media-image-util	meta-tizen-common-base/recipes-ApplicationFramework
+capi-media-sound-manager	meta-tizen-common-base/recipes-ApplicationFramework
+capi-media-wav-player	meta-tizen-common-base/recipes-ApplicationFramework
+capi-network-bluetooth	meta-tizen-common-base/recipes-ApplicationFramework
+capi-network-connection	meta-tizen-common-base/recipes-ApplicationFramework
+capi-network-nfc	meta-tizen-common-base/recipes-ApplicationFramework
+capi-network-tethering	meta-tizen-common-base/recipes-ApplicationFramework
+capi-network-wifi	meta-tizen-common-base/recipes-ApplicationFramework
+capi-system-device	meta-tizen-common-base/recipes-ApplicationFramework
+capi-system-info	meta-tizen-common-base/recipes-ApplicationFramework
+capi-system-power	meta-tizen-common-base/recipes-ApplicationFramework
+capi-system-runtime-info	meta-tizen-common-base/recipes-ApplicationFramework
+capi-system-sensor	meta-tizen-common-base/recipes-ApplicationFramework
+capi-system-system-settings	meta-tizen-common-base/recipes-ApplicationFramework
+capi-web-favorites	meta-tizen-common-base/recipes-ApplicationFramework
+capi-web-url-download	meta-tizen-common-base/recipes-ApplicationFramework
 CommonAPI
 CommonAPI-DBus
 contacts-service
-crosswalk
-dbus-python
+crosswalk	meta-crosswalk/recipes-crosswalk
+dbus-python	meta-tizen-common-base/recipes-core
 default-ac-domains
 desktop-file-utils
 desktop-skin
@@ -53,13 +53,13 @@ download-provider
 doxygen
 drm-client
 ecryptfs-utils
-edbus
-efl
+edbus	meta-tizen-common-base/recipes-efl
+efl	meta-tizen-common-base/recipes-efl
 efl-theme-tizen-hd
-elementary
+elementary	meta-tizen-common-base/recipes-efl
 evolution-data-server
 fdupes
-festival
+festival	meta-tizen-common-base/recipes-extended
 gcr
 genivi-audio-manager
 genivi-shell
@@ -73,27 +73,27 @@ hwdata
 ibus
 ibus-hangul
 ibus-libpinyin
-ico-uxf-device-input-controller
-ico-uxf-homescreen
-ico-uxf-homescreen-sample-apps
-ico-uxf-utilities
-ico-uxf-weston-plugin
-ico-vic-amb-plugin
-ico-vic-carsimulator
+ico-uxf-device-input-controller	meta-tizen-ivi/recipes-ico
+ico-uxf-homescreen	meta-tizen-ivi/recipes-ico
+ico-uxf-homescreen-sample-apps	meta-tizen-ivi/recipes-ico
+ico-uxf-utilities	meta-tizen-ivi/recipes-ico
+ico-uxf-weston-plugin	meta-tizen-ivi/recipes-ico
+ico-vic-amb-plugin	meta-tizen-ivi/recipes-ico
+ico-vic-carsimulator	meta-tizen-ivi/recipes-ico
 iniparser
-keyutils
+keyutils	meta-tizen-ivi/recipes-support-ivi
 lemolo
 libaccounts-svc
-libav
+libav	meta-tizen-common-base/recipes-multimedia
 libcom-core
 libdevice-node
-libdrm
+libdrm	meta-tizen-common-base/recipes-graphics
 libfeedback
 libgsasl
 libgsignon-glib
 libhangul
 libiri
-libjpeg-turbo
+libjpeg-turbo	meta-tizen-common-base/recipes-core
 libmedia-service
 libmedia-thumbnail
 libmm-common
@@ -121,7 +121,7 @@ libwbxml2
 libwebsockets
 libwifi-direct
 libxml2
-lua
+lua	meta-tizen-common-base/recipes-devtools
 media-server
 message-port
 meta-common
@@ -144,7 +144,7 @@ net-config
 nfc-manager-neard
 node-startup-controller
 notification
-pam
+pam	meta-tizen-common-base/recipes-extended
 phoned
 pims-ipc
 pkgmgr
@@ -155,7 +155,7 @@ pulseaudio-module-murphy-ivi
 pwdutils
 python-libxml2
 python-setuptools
-rpm
+rpm	meta-tizen-common-base/recipes-devtools
 rygel
 security-server
 sensor
@@ -164,25 +164,25 @@ sphinxbase
 status
 sync-agent
 syspopup
-systemd
+systemd	meta-tizen-common-base/recipes-core
 system-server
 tdb
 tiff
-tizen-extensions-crosswalk
+tizen-extensions-crosswalk	meta-crosswalk/recipes-crosswalk
 tizen-platform-config
 tizen-platform-wrapper
 udev-rules
 update-desktop-files
 user-session-units
 uthash
-vala
+vala	meta-tizen-common-base/recipes-devtools
 vconf
 vconf-internal-keys
 weekeyboard
-weston
-weston-common
-weston-ivi
-weston-ivi-shell
+weston	meta-tizen-common-base/recipes-graphics
+weston-common	meta-tizen-common/recipes-graphics
+weston-ivi	meta-tizen-ivi/recipes-graphics
+weston-ivi-shell	meta-tizen-ivi/recipes-graphics
 wrt-widgets
 xdgmime
 xmlsec1
