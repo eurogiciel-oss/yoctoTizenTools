@@ -1,0 +1,9 @@
+connman TC-1805
+boost TC-1804
+bison TC-1803
+binutils TC-1802
+atk TC-1801
+alsa-utils TC-1800
+alsa-lib TC-1799
+acpid TC-1798
+acl TC-1797

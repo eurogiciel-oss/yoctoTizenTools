@@ -1,0 +1,198 @@
+<manifest xmlns:tz="http://tizen.org">
+  <remote fetch="ssh://review.tizen.org" name="tizen-gerrit" review="https://review.tizen.org/gerrit"/>
+  <remote fetch="ssh://git@github.com" name="github"/>
+  <default remote="tizen-gerrit"/>
+
+ <!-- YOCTO FIX -->
+ 
+ <!-- Merged NOT submitted On IVI-->
+
+ <!-- Merged NOT submitted On Common-->
+
+ 
+ <!-- +2 but not merge -->
+
+ <!-- New -->
+ 
+ <!-- Automotive/Modello -->
+
+ 
+ <!-- automotive-->
+ <!-- automotive-message-broker https://review.tizen.org/gerrit/#/c/27877/ -->
+ <project name="profile/ivi/automotive-message-broker"  revision="567ede081ff46fd521494356af4eda0a3e724fd2" />
+ <!-- genivi-audio-manager https://review.tizen.org/gerrit/27879 -->
+ <project name="profile/ivi/genivi/genivi-audio-manager"  revision="e73abf1288387f6c0d58cde8ac48a1950062294b" />
+ <!-- phoned https://review.tizen.org/gerrit/28545 -->
+ <project name="profile/ivi/phoned"  revision="7e698bc380b479faec28ffd192058ee162de9cb5" />
+
+
+ <!-- App Framework -->
+ <!-- applications -->
+ <!-- libslp-memo https://review.tizen.org/gerrit/28067 -->
+ <project name="apps/core/preloaded/libslp-memo"  revision="5b9cfdc3280cb1aeb694a0fcfadd0c8512492187" />
+ <!-- slp-pkgmgr https://review.tizen.org/gerrit/28226 -->
+ <project name="platform/core/appfw/slp-pkgmgr"  revision="6f045429815c83046d9e44f3f1005122fb78bc16" />
+ <!-- ail https://review.tizen.org/gerrit/#/c/28348/ -->  
+ <project name="platform/core/appfw/ail"  revision="e252503f15cb8c3d3401178f926762498ab9aedb" />
+ 
+ <!-- App Framework/Configuration -->
+ <!-- vconf https://review.tizen.org/gerrit/28147 -->
+ <project name="platform/core/appfw/vconf"  revision="4743f153c4f30c05e65c895ee03b689fafa29a43" />
+ 
+ <!-- App framework/Application Core -->
+ <!-- app-core https://review.tizen.org/gerrit/27752 -->
+ <project name="platform/core/appfw/app-core"  revision="d86d0066b93cf402badc408de591e54d6db6c164" />
+ 
+ <!-- App Framework/Application Communication -->
+ <!-- message-port-dbus https://review.tizen.org/gerrit/28592 -->
+ <project name="platform/core/appfw/message-port-dbus"  revision="b95c605d610b89486ce93e74461df0ac09e3e837" />
+ 
+ <!-- Base -->
+ <!-- ppl https://review.tizen.org/gerrit/27891 -->
+ <project name="platform/upstream/ppl"  revision="80f9727a1037f97cef51a371d298a286e20961e3" />
+ <!-- dbus-python https://review.tizen.org/gerrit/28120 -->
+ <project name="platform/upstream/dbus-python"  revision="a8f0e5c73d4bbf6068a598971ad24135a881fab9" />
+ 
+ <!-- Base/Startup -->
+ <!-- systemd https://review.tizen.org/gerrit/#/c/25163/ -->
+ <project name="platform/upstream/systemd"  revision="9986a304a0a3f771d671f04d1eebfea6d9a32a20" />
+ 
+ <!-- base/device_management -->
+ <!-- system-server https://review.tizen.org/gerrit/#/c/28168/  -->
+ <project name="platform/core/system/system-server"  revision="9c78025072cb67f27da99d22bac34afb01ea0a23" />
+ 
+ <!-- Base/File Systems -->
+ <!-- ecryptfs https://review.tizen.org/gerrit/#/c/27842/  -->
+ <project name="platform/upstream/ecryptfs-utils"  revision="f496d10d2711cbb2b9d3f7600756487df383e737" />
+ 
+ <!-- Graphics & UI Framework -->
+ <!-- efl https://review.tizen.org/gerrit/27834  -->
+ <project name="platform/upstream/efl"  revision="f7a97238b515310da98621328aadb9275bc92012" />
+ <!-- wayland-ivi-extension https://review.tizen.org/gerrit/28126 -->
+ <project name="profile/ivi/wayland-ivi-extension"  revision="fd633eb0761da7a0be4bc1f920f62b5bb6dfe639" />
+ <!-- ibus https://review.tizen.org/gerrit/27947 -->
+ <project name="platform/upstream/ibus"  revision="d474a5c218f8630192ee2bea8d321c245e2c2b89" />
+ <!-- libdrm https://review.tizen.org/gerrit/28530 -->
+ <project name="platform/upstream/libdrm"  revision="2a8aaf2b9f403cde35b88653394906af578845ab" />
+ 
+ <!-- Graphics and UI Framework/Input Framework -->
+ <!-- libhangul https://review.tizen.org/gerrit/27601 -->
+ <project name="platform/core/uifw/libhangul"  revision="2fe339978867090f76ae0ebb1b1863e374b63ee2" />
+ 
+ <!-- Location -->
+ <!-- libslp-location https://review.tizen.org/gerrit/28138 -->
+ <project name="platform/core/location/libslp-location"  revision="0d55b8e4b5b01019c6cfca14541563bd3c1b4f7f" />
+ 
+ <!-- Multimedia -->
+ <!-- alsa-scenario-0.2 https://review.tizen.org/gerrit/28116 -->
+ <project name="framework/multimedia/alsa-scenario-0.2"  revision="915491684441521d60e55c6a5cbb65d482e5e5ab" />
+ <!-- libmm-player https://review.tizen.org/gerrit/28123 -->
+ <project name="platform/core/multimedia/libmm-player"  revision="d396a30a561a0db96094560b21e24e99029481c0" />
+ <!-- avsystem https://review.tizen.org/gerrit/28140 -->
+ <project name="platform/core/multimedia/avsystem"  revision="e2bc7b88d123b0ff997061e9a4998106f7f5c3f3" />
+ <!-- libmm-utility https://review.tizen.org/gerrit/28154 -->
+ <project name="platform/core/multimedia/libmm-utility"  revision="2478d64176e02c32bdd12ba2ed58a57a4faeada0" />
+ 
+ <!-- Multimedia/Media Service -->
+ <!-- libmm-log https://review.tizen.org/gerrit/28139 -->
+ <project name="platform/core/multimedia/libmm-log"  revision="4b994c87d76bafd03b02833a5645c524487f914a" />
+ 
+ <!-- Multimedia/Audio FW -->
+ <!-- libmedia-service https://review.tizen.org/gerrit/28225 -->
+ <project name="platform/core/multimedia/libmedia-service"  revision="b7f1f1ec421c16a4e6fea164495c281887a5d3b8" />
+ <!-- pulseaudio-module-murphy-ivi https://review.tizen.org/gerrit/28320 -->
+ <project name="profile/ivi/pulseaudio-module-murphy-ivi"  revision="b81902a13e47d93f066bb130c928d831cfe53beb" />
+ <!-- pulseaudio https://review.tizen.org/gerrit/28453 -->
+ <project name="platform/upstream/pulseaudio"  revision="c91f47e3d11e72bf583f7d84643a9d768c168684" />
+
+ <!-- Multimedia/Libraries -->
+ <!-- libav https://review.tizen.org/gerrit/28295 -->
+ <project name="platform/upstream/libav"  revision="1445e92f0200ac2ce1a3988334a7d7992122f0f3" />
+
+ <!-- Network and Connectivity-->
+ <!-- download-provider https://review.tizen.org/gerrit/27812  -->
+ <project name="platform/framework/web/download-provider"  revision="1fb4a3614bd271355b6babf42076d3bda2da122c" />
+ <!-- hplip https://review.tizen.org/gerrit/27844  -->
+ <project name="platform/upstream/hplip"  revision="c8d20b298c235248c8f32c82ca72a93bc7c6a75c" />
+ <!-- neardal https://review.tizen.org/gerrit/28143 -->
+ <project name="platform/upstream/neardal"  revision="87f41a7bd3b4bcc1bb3c54ffaeda53f5e65dc8a7" />
+ 
+ <!-- Security/Accounts -->
+ <!-- libgsignon-glib https://review.tizen.org/gerrit/25406 -->
+ <project name="platform/upstream/libgsignon-glib"  revision="09502b1c5ce5f901be78bbae6eea19606252abc0" />
+ <!-- gsignond-plugin-sasl https://review.tizen.org/gerrit/28162 -->
+ <project name="platform/upstream/gsignond-plugin-sasl" revision="74233b7793f7f012aaeb3118694f7dfbe35f0d38" />
+ <!-- gsignond-plugin-oauth https://review.tizen.org/gerrit/28163 -->
+ <project name="platform/upstream/gsignond-plugin-oauth" revision="8dddc2078d70cc193189e02d07f66f75fc828843" />
+ 
+ <!-- Security/Certificate Management -->
+ <!-- gpg2 https://review.tizen.org/gerrit/28377 -->
+ <project name="platform/upstream/gpg2" revision="fd45bba47cfbab680118e8154c47993549dfbad6" />
+
+ <!-- Social & Content -->
+ <!-- evolution-data-server https://review.tizen.org/gerrit/28458 -->
+ <project name="platform/upstream/evolution-data-server"  revision="653b6ed2103475434475d89019dac05efd62d37a" />
+
+ <!-- Social & Content/pim -->
+ <!-- contacts-service https://review.tizen.org/gerrit/27753 -->
+ <project name="platform/core/pim/contacts-service"  revision="65311cfbd4a5530192daba9099ff9454318b907e" />
+ 
+ <!-- system/logging -->
+ <!-- sys-string-0 https://review.tizen.org/gerrit/27823  -->
+ <project name="platform/core/base/sys-string-0"  revision="c055d6d016ce7b4d2189df8355d583fcfa434210" />
+ 
+ <!-- platform_development/python -->
+ <!-- python-pygments https://review.tizen.org/gerrit/27847 -->
+ <project name="platform/upstream/python-pygments"  revision="1c7de0a40c2763b3bd3f611462f9b6e856a347a5" />
+ 
+ <!-- system -->
+ <!-- libwbxml2 https://review.tizen.org/gerrit/28066 -->
+ <project name="platform/upstream/libwbxml2"  revision="717cf1e3430cacd4c0ba04394b8f60f1e4ad4900" />
+ 
+ <!-- Graphics & UI Framework/EFL -->
+ <!-- edbus https://review.tizen.org/gerrit/28161 -->
+ <project name="platform/upstream/edbus" revision="26ff9807ff9364ed035c38fc909d3e7a3c85320b" />
+ 
+ <!-- Applications/Telephony -->
+ <!-- lemolo https://review.tizen.org/gerrit/28310 -->
+ <project name="profile/ivi/lemolo" revision="b04fcc0601b9b7d9e0bc1d90d23a4166ce3fa6a6" />
+ 
+ <!-- Automotive/ICO Homescreen -->
+ <!-- ico-uxf-weston-plugin https://review.tizen.org/gerrit/28311 -->
+ <project name="profile/ivi/ico-uxf-weston-plugin" revision="240f812897b4191589ae87e3d8bc45b7117e5026" />
+ <!-- ico-vic-amb-plugin https://review.tizen.org/gerrit/28311 -->
+ <project name="profile/ivi/ico-vic-amb-plugin" revision="02ef0382aa81212de4246c6e6074eb10c678007f" />
+ <!-- ico-uxf-homescreen-sample-apps https://review.tizen.org/gerrit/28559 -->
+ <project name="profile/ivi/ico-uxf-homescreen-sample-apps" revision="c0f2aa22c0ec073520791ad13728f3d2c328b608" />
+ <!-- ico-uxf-homescreen https://review.tizen.org/gerrit/#/c/28587/ -->
+ <project name="profile/ivi/ico-uxf-homescreen" revision="74dc27c5bac25a80ad7374515fd043f4ae4bd12f" />
+ 
+ <!-- System/Service -->
+ <!-- murphy https://review.tizen.org/gerrit/28042 -->
+ <project name="profile/ivi/murphy" revision="ec834e4a57bf4a9ea63554e2bf3b247b666fe347" />
+ 
+ <!-- Base/Utilities -->
+ <!-- gconf-dbus https://review.tizen.org/gerrit/28439 -->
+ <project name="platform/core/base/gconf-dbus" revision="9c7d4e87f97450c4aff1d96db71d7bff881959b2" />
+ 
+ <!-- System/Libraries -->
+ <!-- bundle https://review.tizen.org/gerrit/28511 -->
+ <project name="platform/core/base/bundle" revision="e36cdeba173a93b72110b536094220e1a00c566c" />
+ <!-- common https://review.tizen.org/gerrit/28680 -->
+ <project name="platform/core/api/common" revision="09b56a10f65dd1869c2d1ea987190fa9d9cafd69" />
+ <!-- system-info https://review.tizen.org/gerrit/28699 -->
+ <project name="platform/core/api/system-info" revision="5697b6bdb6f3cccc3637a0ce50e461dbc7eb9ff3" />
+ <!-- privacy-manager https://review.tizen.org/gerrit/28723 -->
+ <project name="platform/core/security/privacy-manager" revision="9771931036d2c3ced1e962f3caf149999b43f23b" />
+ <!-- app-checker https://review.tizen.org/gerrit/28725 -->
+ <project name="platform/core/appfw/app-checker" revision="70200243a1e419ff81a30fa8a436571422a33a3d" />
+ <!-- aul-1 https://review.tizen.org/gerrit/28726 -->
+ <project name="platform/core/appfw/aul-1" revision="6a5c0b16ac45835babaca4fc8984bbf27469725c" />
+ <!-- security-server https://review.tizen.org/gerrit/28739 -->
+ <project name="platform/core/security/security-server" revision="ae009054afbe5b8885da76af1a8127daa63742f6" />
+ 
+ <!-- ico-vic-carsimulator https://review.tizen.org/gerrit/28957 -->
+ <project name="profile/ivi/ico-vic-carsimulator" revision="bf9beedad80666c9ddff39154e6fc741bbaed5e4" />
+ 
+ 
+ </manifest>
