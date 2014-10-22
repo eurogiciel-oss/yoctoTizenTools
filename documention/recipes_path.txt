@@ -1,14 +1,14 @@
 adns	meta-tizen-common-base/recipes-support
 ail	meta-tizen-common-base/recipes-ApplicationFramework
-alarm-manager
-alsa-scenario
-app-checker
-app-core
-appcore-agent
-app-svc
-audio-session-manager
-aul
-automotive-message-broker
+alarm-manager	meta-tizen-common-base/recipes-ApplicationFramework
+alsa-scenario	meta-tizen-common-base/recipes-multimedia
+app-checker	meta-tizen-common-base/recipes-ApplicationFramework
+app-core	meta-tizen-common-base/recipes-ApplicationFramework
+appcore-agent	meta-tizen-common-base/recipes-ApplicationFramework
+app-svc	meta-tizen-common-base/recipes-ApplicationFramework
+audio-session-manager	meta-tizen-common-base/recipes-multimedia
+aul	meta-tizen-common-base/recipes-ApplicationFramework
+automotive-message-broker	meta-tizen-ivi/recipes-extended
 avsystem
 badge
 bluetooth-frwk	meta-tizen-common-base/recipes-connectivity
@@ -48,11 +48,11 @@ default-ac-domains
 desktop-file-utils
 desktop-skin
 dlog
-dlt
+dlt	meta-tizen-ivi/recipes-extended
 download-provider
 doxygen
 drm-client
-ecryptfs-utils
+ecryptfs-utils	meta-tizen-ivi/recipes-support-ivi
 edbus	meta-tizen-common-base/recipes-efl
 efl	meta-tizen-common-base/recipes-efl
 efl-theme-tizen-hd
@@ -61,8 +61,8 @@ evolution-data-server
 fdupes
 festival	meta-tizen-common-base/recipes-extended
 gcr
-genivi-audio-manager
-genivi-shell
+genivi-audio-manager	meta-tizen-ivi/recipes-multimedia
+genivi-shell	meta-tizen-ivi/recipes-graphics
 gobject-introspection
 gpg2
 gsignond
@@ -94,26 +94,26 @@ libgsignon-glib
 libhangul
 libiri
 libjpeg-turbo	meta-tizen-common-base/recipes-core
-libmedia-service
-libmedia-thumbnail
-libmm-common
-libmm-fileinfo
-libmm-log
-libmm-player
-libmm-session
-libmm-sound
-libmm-ta
-libmm-utility
+libmedia-service	meta-tizen-common-base/recipes-multimedia
+libmedia-thumbnail	meta-tizen-common-base/recipes-multimedia
+libmm-common	meta-tizen-common-base/recipes-multimedia
+libmm-fileinfo	meta-tizen-common-base/recipes-multimedia
+libmm-log	meta-tizen-common-base/recipes-multimedia
+libmm-player	meta-tizen-common-base/recipes-multimedia
+libmm-session	meta-tizen-common-base/recipes-multimedia
+libmm-sound	meta-tizen-common-base/recipes-multimedia
+libmm-ta	meta-tizen-common-base/recipes-multimedia
+libmm-utility	meta-tizen-common-base/recipes-multimedia
 libnet-client
 libpinyin
 libprivilege-control
 librua
 libsecret
 libsf-common
-libslp-db-util
-libslp-location
-libslp-memo
-libslp-sysman
+libslp-db-util	meta-tizen-common-base/recipes-applications
+libslp-location	meta-tizen-common-base/recipes-applications
+libslp-memo	meta-tizen-common-base/recipes-applications
+libslp-sysman	meta-tizen-common-base/recipes-applications
 libtapi
 libtapi3
 libtbm
@@ -138,7 +138,7 @@ Modello-Nav	meta-tizen-ivi/recipes-modello
 Modello-Phone	meta-tizen-ivi/recipes-modello
 Modello-SDL	meta-tizen-ivi/recipes-modello
 msg-service
-murphy
+murphy	meta-tizen-ivi/recipes-automotive
 neardal
 net-config
 nfc-manager-neard
@@ -150,17 +150,17 @@ pims-ipc
 pkgmgr
 pkgmgr-info
 privacy-manager-server
-pulseaudio
-pulseaudio-module-murphy-ivi
+pulseaudio	meta-tizen-common-base/recipes-multimedia
+pulseaudio-module-murphy-ivi	meta-tizen-ivi/recipes-multimedia
 pwdutils
-python-libxml2
+python-libxml2	meta-tizen-common-base/recipes-core
 python-setuptools
 rpm	meta-tizen-common-base/recipes-devtools
-rygel
+rygel	meta-tizen-ivi/recipes-multimedia
 security-server
 sensor
-smack
-sphinxbase
+smack	meta-tizen-common-base/recipes-security
+sphinxbase	meta-tizen-common-base/recipes-extended/
 status
 sync-agent
 syspopup
@@ -169,8 +169,8 @@ system-server
 tdb
 tiff
 tizen-extensions-crosswalk	meta-crosswalk/recipes-crosswalk
-tizen-platform-config
-tizen-platform-wrapper
+tizen-platform-config	meta-tizen-common-base/recipes-core
+tizen-platform-wrapper	meta-tizen-common-base/recipes-core
 udev-rules
 update-desktop-files
 user-session-units
