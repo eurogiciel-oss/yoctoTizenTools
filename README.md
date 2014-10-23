@@ -1,0 +1,1 @@
+https://wiki.tizen.org/wiki/Build_Tizen_with_Yocto
