@@ -12,5 +12,5 @@ for prj_conf in TizenCommon_config_genericx86      \
                 TizenIVI_ICO_config_genericx86-64         \
                 TizenIVI_ICO_config_qemux86      \
                 ; do
-    ${YTUS} --clean --config ${DIR_TOOL}/${prj_conf} --rev-file ${REV_FILE} --build
+    ${YTUS} --clean-force --config ${DIR_TOOL}/${prj_conf} --rev-file ${REV_FILE} --build
 done
