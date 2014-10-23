@@ -214,27 +214,27 @@ echo --------------
 add_meta_to_bblayers ${WORKINGDIR}/meta-tizen "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 rm_meta_to_bblayers meta-efl "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-oe "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-multimedia "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-ruby "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
-add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-systemd "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 
 echo --------------
 
 case ${MACHINE} in
     haswell-wc)
     add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-haswell-wc "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
     ;;
     romley-ivb)
     add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-romley "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
     ;;
     valleyisland-64)
     add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
     ;;
     valleyisland-32)
     add_meta_to_bblayers ${WORKINGDIR}/meta-intel/meta-isg/meta-valleyisland "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+    add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
     ;;
 esac
-add_meta_to_bblayers ${WORKINGDIR}/meta-intel "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 
 change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 
