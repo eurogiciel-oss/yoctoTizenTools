@@ -237,6 +237,8 @@ case ${MACHINE} in
 esac
 
 change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
+change_conf_default_value "DL_DIR ?= " "DL_DIR = ${WORKINGDIR}/poky/downloads" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
+change_conf_default_value "#OE_TERMINAL = " "OE_TERMINAL = \"screen\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 
 if [ "${CLEAN_PRJ}" = "yes" ] ; then
     echo "Clean directory"
@@ -254,6 +256,7 @@ if [ "${BUILD_PRJ_AFTER}" = "yes" ] ; then
     echo "Build image:"
     cd "${WORKINGDIR}/poky"
     source oe-init-build-env ${BUILD_PRJ}
+    bitbake -k "${IMAGE_NAME}" -c fetchall
     bitbake -k "${IMAGE_NAME}"
 else
     echo "To build image:"
