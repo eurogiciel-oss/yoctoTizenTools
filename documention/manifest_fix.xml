@@ -185,5 +185,7 @@
  <!-- ico-vic-carsimulator https://review.tizen.org/gerrit/28957 -->
  <project name="profile/ivi/ico-vic-carsimulator" revision="bf9beedad80666c9ddff39154e6fc741bbaed5e4" />
  
+ <!-- common-multimedia-suite https://review.tizen.org/gerrit/29420 -->
+ <project name="test/common/common-multimedia-suite" revision="0a75992bd0357284a47973ebba5264bc2f18e8b6" />
  
  </manifest>
