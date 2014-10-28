@@ -12,7 +12,9 @@ connman	TC-1805
 coreutils	TC-1806
 curl	TC-1807
 dbus	TC-1812
+dbus-python TC-1946
 docbook-xsl-stylesheets TC-1915
+elfutils  TC-1947
 file	TC-1814
 flac	TC-1815
 flex	TC-1817
@@ -27,6 +29,7 @@ glibc	TC-1825
 gmp	TC-1826
 gnome-common  TC-1916
 gnutls	TC-1827
+gpg2  TC-1948
 grep	TC-1828
 gssdp TC-1931
 gupnp TC-1929
