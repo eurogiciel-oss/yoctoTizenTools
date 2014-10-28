@@ -51,6 +51,7 @@ libogg	TC-1838
 libpcap	TC-1839
 libpciaccess	TC-1840
 libpng	TC-1841
+libsoup TC-1957
 libtasn1  TC-1926
 libtirpc	TC-1842
 libusb-compat	TC-1843
