@@ -91,7 +91,6 @@ tiff	TC-1874
 tzdata	TC-1875
 usbutils	TC-1876
 util-macros	TC-1877
-v4l-utils	TC-1878
 xkeyboard-config	TC-1879
 xz	TC-1880
 zeromq	TC-1881
