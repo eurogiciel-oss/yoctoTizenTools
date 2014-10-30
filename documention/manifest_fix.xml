@@ -4,6 +4,7 @@
   <default remote="tizen-gerrit"/>
 
  <!-- YOCTO FIX -->
+ <project name="platform/framework/web/crosswalk" revision="0f4238ad267f74b4225c2934236535e937ea8b02" />
  
  <!-- Merged NOT submitted On IVI-->
  <!-- lemolo https://review.tizen.org/gerrit/28310 -->
