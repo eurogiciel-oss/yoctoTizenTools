@@ -4,7 +4,6 @@
   <default remote="tizen-gerrit"/>
 
  <!-- YOCTO FIX -->
- <project name="platform/framework/web/crosswalk" revision="0f4238ad267f74b4225c2934236535e937ea8b02" />
  
  <!-- Merged NOT submitted On IVI-->
  <!-- lemolo https://review.tizen.org/gerrit/28310 -->
@@ -198,7 +197,7 @@
  
  <!-- desktop-skin https://review.tizen.org/gerrit/29654 -->
  <project name="profile/common/desktop-skin" revision="ac4f1b6b5e6021c5ef6e9e3033e06215d4ba1274" />
- 
- 
- 
+ <!-- meta-common https://review.tizen.org/gerrit/29657 -->
+ <project name="profile/common/meta" revision="e0b55742c3a4d35d44168a2eb1fb1367c1f37481" />
+
  </manifest>
