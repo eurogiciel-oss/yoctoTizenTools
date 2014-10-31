@@ -196,5 +196,9 @@
  <!-- neardal https://review.tizen.org/gerrit/29651 -->
  <project name="platform/upstream/neardal" revision="3bbe63f6b9e3e49816d7d65fa95fdef6ac5dbe28" />
  
+ <!-- desktop-skin https://review.tizen.org/gerrit/29654 -->
+ <project name="profile/common/desktop-skin" revision="ac4f1b6b5e6021c5ef6e9e3033e06215d4ba1274" />
+ 
+ 
  
  </manifest>
