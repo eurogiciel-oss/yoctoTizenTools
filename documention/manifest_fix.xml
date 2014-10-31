@@ -192,5 +192,7 @@
  <!-- vala https://review.tizen.org/gerrit/29648 -->
  <project name="platform/upstream/vala" revision="840fd0f666c91fba0169b8176cb88a80b689ad8a" />
  
+ <!-- libav https://review.tizen.org/gerrit/29650 -->
+ <project name="platform/upstream/libav" revision="0fd9bbab02cc36060782e7a1f68417b5810300bf" />
  
  </manifest>
