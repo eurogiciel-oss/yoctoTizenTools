@@ -189,4 +189,8 @@
  <!-- common-multimedia-suite https://review.tizen.org/gerrit/29420 -->
  <project name="test/common/common-multimedia-suite" revision="0a75992bd0357284a47973ebba5264bc2f18e8b6" />
  
+ <!-- vala https://review.tizen.org/gerrit/29648 -->
+ <project name="platform/upstream/vala" revision="840fd0f666c91fba0169b8176cb88a80b689ad8a" />
+ 
+ 
  </manifest>
