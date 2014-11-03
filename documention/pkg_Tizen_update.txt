@@ -8,7 +8,6 @@ binutils	TC-1802
 bison	TC-1803
 boost	TC-1804
 busybox TC-1918
-connman	TC-1805
 coreutils	TC-1806
 curl	TC-1807
 dbus	TC-1812
