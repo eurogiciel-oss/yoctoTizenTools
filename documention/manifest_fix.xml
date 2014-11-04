@@ -4,6 +4,7 @@
   <default remote="tizen-gerrit"/>
 
  <!-- YOCTO FIX -->
+ <project name="platform/framework/web/crosswalk" revision="460390ae423ed8b84ea014d6389dc529cde2aec5" />
  
  <!-- Merged NOT submitted On IVI-->
  <!-- lemolo https://review.tizen.org/gerrit/28310 -->
@@ -58,8 +59,6 @@
  <project name="platform/upstream/dbus-python"  revision="a8f0e5c73d4bbf6068a598971ad24135a881fab9" />
  
  <!-- Base/Startup -->
- <!-- systemd https://review.tizen.org/gerrit/#/c/25163/ -->
- <project name="platform/upstream/systemd"  revision="9986a304a0a3f771d671f04d1eebfea6d9a32a20" />
  
  <!-- base/device_management -->
  <!-- system-server https://review.tizen.org/gerrit/#/c/28168/  -->
