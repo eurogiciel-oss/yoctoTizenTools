@@ -59,6 +59,8 @@
  <project name="platform/upstream/dbus-python"  revision="a8f0e5c73d4bbf6068a598971ad24135a881fab9" />
  
  <!-- Base/Startup -->
+ <!-- systemd https://review.tizen.org/gerrit/29920  -->
+ <project name="platform/upstream/systemd"  revision="f1a985d567a9094ef916d59d8e528810bdbffc0a" />
  
  <!-- base/device_management -->
  <!-- system-server https://review.tizen.org/gerrit/#/c/28168/  -->
