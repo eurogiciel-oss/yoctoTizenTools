@@ -174,8 +174,8 @@
  <project name="platform/core/api/common" revision="09b56a10f65dd1869c2d1ea987190fa9d9cafd69" />
  <!-- system-info https://review.tizen.org/gerrit/28699 -->
  <project name="platform/core/api/system-info" revision="5697b6bdb6f3cccc3637a0ce50e461dbc7eb9ff3" />
- <!-- privacy-manager https://review.tizen.org/gerrit/28723 -->
- <project name="platform/core/security/privacy-manager" revision="9771931036d2c3ced1e962f3caf149999b43f23b" />
+ <!-- privacy-manager-server https://review.tizen.org/gerrit/29928 -->
+ <project name="platform/core/security/privacy-manager" revision="866b0492038f7515b22f415f40c6edfa02e8cb84" />
  <!-- app-checker https://review.tizen.org/gerrit/28725 -->
  <project name="platform/core/appfw/app-checker" revision="70200243a1e419ff81a30fa8a436571422a33a3d" />
  <!-- aul-1 https://review.tizen.org/gerrit/28726 -->
