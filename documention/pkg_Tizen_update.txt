@@ -42,7 +42,6 @@ kmod  TC-1921
 less  TC-1922
 libassuan TC-1923
 libav	TC-1832
-libdrm	TC-1833
 libffi	TC-1834
 libgcrypt TC-1924
 libical TC-1925
