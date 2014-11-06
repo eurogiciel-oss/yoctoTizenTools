@@ -57,6 +57,7 @@ dlt	meta-tizen-ivi/recipes-extended
 download-provider	meta-tizen-common-base/recipes-connectivity
 doxygen	meta-tizen-common-base/recipes-devtools
 drm-client	meta-tizen-common-base/recipes-graphics
+dukgenerator	meta-tizen-common-base/recipes-core
 ecryptfs-utils	meta-tizen-ivi/recipes-support-ivi
 edbus	meta-tizen-common-base/recipes-efl
 efl	meta-tizen-common-base/recipes-efl
@@ -95,6 +96,7 @@ lemolo	meta-tizen-common-base/recipes-efl
 libaccounts-svc	meta-tizen-common-base/recipes-social
 libav	meta-tizen-common-base/recipes-multimedia
 libcom-core	meta-tizen-common-base/recipes-application-framework
+libcryptsvc	meta-tizen-common-base/recipes-core
 libdevice-node	meta-tizen-common-base/recipes-core
 libdrm	meta-tizen-common-base/recipes-graphics
 libfeedback	meta-tizen-common-base/recipes-core
@@ -154,6 +156,7 @@ net-config	meta-tizen-common-base/recipes-connectivity
 nfc-manager-neard	meta-tizen-common-base/recipes-connectivity
 node-startup-controller	meta-tizen-ivi/recipes-automotive
 notification	meta-tizen-ivi/recipes-framework
+oma-ds-agent	meta-tizen-common-base/recipes-core
 pam	meta-tizen-common-base/recipes-extended
 phoned	meta-tizen-ivi/recipes-modello
 pims-ipc	meta-tizen-common-base/recipes-social
@@ -168,6 +171,7 @@ python-requests	Meta-tizen-common-devtools/recipes-devtools
 python-setuptools	meta-tizen-common-base/recipes-devtools
 rpm	meta-tizen-common-base/recipes-devtools
 rygel	meta-tizen-ivi/recipes-multimedia
+secure-storage	meta-tizen-common-base/recipes-security
 security-server	meta-tizen-common-base/recipes-security
 sensor	meta-tizen-common-base/recipes-core
 smack	meta-tizen-common-base/recipes-security
@@ -194,6 +198,7 @@ vconf-internal-keys	meta-tizen-common-base/recipes-application-framework
 weekeyboard	meta-tizen-common-base/recipes-graphics
 weston	meta-tizen-common-base/recipes-graphics
 weston-common	Meta-tizen-common-demo/recipes-graphics
+Wayland-fits	Meta-tizen-common-devtools/recipes-devtools
 weston-ivi	meta-tizen-ivi/recipes-graphics
 weston-ivi-shell	meta-tizen-ivi/recipes-graphics
 wrt-widgets	Meta-tizen-common-demo/recipes-webframework
