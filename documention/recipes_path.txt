@@ -104,7 +104,6 @@ libgsasl	meta-tizen-common-base/recipes-security/libgsasl
 libgsignon-glib	meta-tizen-common-base/recipes-security/libgsignon-glib
 libhangul	meta-tizen-ivi/recipes-graphics/libhangul
 libiri	meta-tizen-common-base/recipes-core/libiri
-libjpeg-turbo	meta-tizen-common-base/recipes-core/libjpeg-turbo
 libmedia-service	meta-tizen-common-base/recipes-multimedia/libmedia-service
 libmedia-thumbnail	meta-tizen-common-base/recipes-multimedia/libmedia-thumbnail
 libmm-common	meta-tizen-common-base/recipes-multimedia/libmm-common
@@ -163,7 +162,6 @@ pkgmgr-info	meta-tizen-common-base/recipes-application-framework/pkgmgr-info
 privacy-manager	meta-tizen-common-base/recipes-security/privacy-manager
 pulseaudio	meta-tizen-common-base/recipes-multimedia/pulseaudio
 pulseaudio-module-murphy-ivi	meta-tizen-ivi/recipes-multimedia/pulseaudio-module-murphy-ivi
-pwdutils	meta-tizen-common-base/recipes-security/pwdutils
 libxml2	meta-tizen-common-base/recipes-core/python-libxml2
 python-requests	Meta-tizen-common-devtools/recipes-devtools/python-requests
 python-setuptools	meta-tizen-common-base/recipes-devtools/python-setuptools
