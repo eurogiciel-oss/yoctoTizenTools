@@ -159,7 +159,7 @@ phoned	meta-tizen-ivi/recipes-modello
 pims-ipc	meta-tizen-common-base/recipes-social
 pkgmgr	meta-tizen-common-base/recipes-application-framework
 pkgmgr-info	meta-tizen-common-base/recipes-application-framework
-privacy-manager-server	meta-tizen-common-base/recipes-security
+privacy-manager	meta-tizen-common-base/recipes-security
 pulseaudio	meta-tizen-common-base/recipes-multimedia
 pulseaudio-module-murphy-ivi	meta-tizen-ivi/recipes-multimedia
 pwdutils	meta-tizen-common-base/recipes-security
