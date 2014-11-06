@@ -133,7 +133,7 @@ libwifi-direct	meta-tizen-common-base/recipes-connectivity/libwifi-direct
 libxml2	meta-tizen-common-base/recipes-core/libxml2
 lua	meta-tizen-common-base/recipes-devtools/lua
 media-server	meta-tizen-common-base/recipes-multimedia/media-server
-message-port	meta-tizen-common-base/recipes-application-framework/message-port
+message-port-dbus	meta-tizen-common-base/recipes-application-framework/message-port
 meta	meta-tizen-common-base/recipes-devtools/meta-common
 meta-generic	meta-tizen-common-base/recipes-devtools/meta-generic
 Modello_AMBSimulator	meta-tizen-ivi/recipes-modello/Modello-AMBSimulator
