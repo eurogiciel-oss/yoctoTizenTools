@@ -124,8 +124,8 @@ libsf-common	meta-tizen-common-base/recipes-core/libsf-common
 libslp-db-util	meta-tizen-common-base/recipes-applications/libslp-db-util
 libslp-location	meta-tizen-common-base/recipes-applications/libslp-location
 libslp-memo	meta-tizen-common-base/recipes-applications/libslp-memo
-libtapi	meta-tizen-common-base/recipes-telephony/libtapi
 libtapi	meta-tizen-common-base/recipes-telephony/libtapi3
+libtapi-legacy	meta-tizen-common-base/recipes-telephony/libtapi
 libtbm	meta-tizen-ivi/recipes-graphics/libtbm
 libwbxml2	meta-tizen-common-base/recipes-core/libwbxml2
 libwebsockets	Meta-tizen-base/recipes-webframework/libwebsockets
