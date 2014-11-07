@@ -48,6 +48,7 @@ common-api-runtime	meta-tizen-ivi/recipes-automotive/CommonAPI
 common-api-dbus-runtime	meta-tizen-ivi/recipes-automotive/CommonAPI-DBus
 contacts-service	meta-tizen-common-base/recipes-social/contacts-service
 crosswalk	meta-tizen-common-share/recipes-crosswalk/crosswalk
+crosswalk	meta-tizen-common-share/recipes-crosswalk/crosswalk-thirdparty
 dbus-python	meta-tizen-common-base/recipes-core/dbus-python
 default-ac-domains	meta-tizen-common-base/recipes-security/default-ac-domains
 desktop-file-utils	meta-tizen-common-base/recipes-core/desktop-file-utils
@@ -159,7 +160,7 @@ phoned	meta-tizen-ivi/recipes-modello/phoned
 pims-ipc	meta-tizen-common-base/recipes-social/pims-ipc
 slp-pkgmgr	meta-tizen-common-base/recipes-application-framework/pkgmgr
 pkgmgr-info	meta-tizen-common-base/recipes-application-framework/pkgmgr-info
-privacy-manager	meta-tizen-common-base/recipes-security/privacy-manager
+privacy-manager	meta-tizen-common-base/recipes-security/privacy-manager-server
 pulseaudio	meta-tizen-common-base/recipes-multimedia/pulseaudio
 pulseaudio-module-murphy-ivi	meta-tizen-ivi/recipes-multimedia/pulseaudio-module-murphy-ivi
 libxml2	meta-tizen-common-base/recipes-core/python-libxml2
@@ -194,7 +195,7 @@ vconf-internal-keys	meta-tizen-common-base/recipes-application-framework/vconf-i
 weekeyboard	meta-tizen-common-base/recipes-graphics/weekeyboard
 weston	meta-tizen-common-base/recipes-graphics/weston
 weston-common	meta-tizen-common-demo/recipes-graphics/weston-common
-wayland-fits	meta-tizen-common-devtools/recipes-devtools/Wayland-fits
+wayland-fits-master	meta-tizen-common-devtools/recipes-devtools/Wayland-fits
 weston-ivi	meta-tizen-ivi/recipes-graphics/weston-ivi
 weston-ivi-shell	meta-tizen-ivi/recipes-graphics/weston-ivi-shell
 wrt-widgets	meta-tizen-common-demo/recipes-webframework/wrt-widgets
