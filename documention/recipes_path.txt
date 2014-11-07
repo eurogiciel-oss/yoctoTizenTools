@@ -195,7 +195,7 @@ vconf-internal-keys	meta-tizen-common-base/recipes-application-framework/vconf-i
 weekeyboard	meta-tizen-common-base/recipes-graphics/weekeyboard
 weston	meta-tizen-common-base/recipes-graphics/weston
 weston-common	meta-tizen-common-demo/recipes-graphics/weston-common
-wayland-fits-master	meta-tizen-common-devtools/recipes-devtools/Wayland-fits
+wayland-fits	meta-tizen-common-devtools/recipes-devtools/wayland-fits-master
 weston-ivi	meta-tizen-ivi/recipes-graphics/weston-ivi
 weston-ivi-shell	meta-tizen-ivi/recipes-graphics/weston-ivi-shell
 wrt-widgets	meta-tizen-common-demo/recipes-webframework/wrt-widgets
