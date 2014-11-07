@@ -4,7 +4,6 @@ alsa-lib	TC-1799
 alsa-utils	TC-1800
 atk	TC-1801
 avahi TC-1914
-binutils	TC-1802
 bison	TC-1803
 boost	TC-1804
 busybox TC-1918
@@ -19,13 +18,11 @@ flac	TC-1815
 flex	TC-1817
 fontconfig	TC-1818
 gawk	TC-1819
-gdb	TC-1820
 gdbm	TC-1821
 gdk-pixbuf	TC-1822
 git TC-1823
 glib-networking	TC-1824
 glibc	TC-1825
-gmp	TC-1826
 gnome-common  TC-1916
 gnutls	TC-1827
 gpg2  TC-1948
