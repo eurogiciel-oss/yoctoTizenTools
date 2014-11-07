@@ -211,7 +211,13 @@ source oe-init-build-env ${BUILD_PRJ}
   
 echo add and remove meta 
 echo --------------    
-add_meta_to_bblayers ${WORKINGDIR}/meta-tizen "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-adaptation "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-base "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-demo "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-devtools "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-share "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-ivi "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+
 rm_meta_to_bblayers meta-efl "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 add_meta_to_bblayers ${WORKINGDIR}/meta-openembedded/meta-oe "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 
