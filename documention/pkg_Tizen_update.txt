@@ -65,7 +65,6 @@ neard	TC-1855
 nettle	TC-1856
 ofono	TC-1857
 openssh	TC-1858
-openssl	TC-1859
 orc	TC-1860
 p11-kit TC-1927
 pango	TC-1861
