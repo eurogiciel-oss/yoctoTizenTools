@@ -163,7 +163,6 @@ pkgmgr-info	meta-tizen-common-base/recipes-application-framework/pkgmgr-info
 privacy-manager	meta-tizen-common-base/recipes-security/privacy-manager-server
 pulseaudio	meta-tizen-common-base/recipes-multimedia/pulseaudio
 pulseaudio-module-murphy-ivi	meta-tizen-ivi/recipes-multimedia/pulseaudio-module-murphy-ivi
-libxml2	meta-tizen-common-base/recipes-core/python-libxml2
 python-requests	meta-tizen-common-devtools/recipes-devtools/python-requests
 python-setuptools	meta-tizen-common-base/recipes-devtools/python-setuptools
 rpm	meta-tizen-common-base/recipes-devtools/rpm
