@@ -19,7 +19,6 @@ flex	TC-1817
 fontconfig	TC-1818
 gawk	TC-1819
 gdbm	TC-1821
-gdk-pixbuf	TC-1822
 git TC-1823
 glib-networking	TC-1824
 glibc	TC-1825
