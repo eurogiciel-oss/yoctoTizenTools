@@ -75,6 +75,7 @@ psmisc	TC-1865
 python-nose	TC-1866
 readline	TC-1867
 sbc	TC-1868
+screen  TC-2059
 sed	TC-1869
 shared-mime-info	TC-1870
 sudo	TC-1871
