@@ -1,30 +1,30 @@
 === Available recipes: ===
 CommonAPI:
-  ?                    2.1.6
+  meta-tizen-ivi       2.1.6
 CommonAPI-DBus:
-  ?                    2.1.6
+  meta-tizen-ivi       2.1.6
 Modello-AMBSimulator:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Appmanager:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Common:
-  ?                    0.0.3
+  meta-tizen-ivi       0.0.3
 Modello-Dashboard:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Homescreen:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Hvac:
-  ?                    0.0.3
+  meta-tizen-ivi       0.0.3
 Modello-Installer:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Multimediaplayer:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Nav:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-Phone:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 Modello-SDL:
-  ?                    0.0.2
+  meta-tizen-ivi       0.0.2
 acl:
   meta                 2.2.52
 acpica:
@@ -110,7 +110,7 @@ autogen-native:
 automake:
   meta                 1.14.1
 automotive-message-broker:
-  ?                    0.11.901
+  meta-tizen-ivi       0.11.901
 avahi:
   meta                 0.6.31
 avahi-ui:
@@ -193,6 +193,8 @@ bullet:
   meta-tizen-common-base 2.81
 bundle:
   meta-tizen-common-base 0.1.31
+bundler:
+  meta-ruby            1.6.2
 busybox:
   meta                 1.22.1
   meta                 1.22.1+gitAUTOINC+d9e0c438e1
@@ -274,6 +276,8 @@ chkconfig-alternatives-native:
   meta                 1.3.59+AUTOINC+cd437ecbd8
 chrpath:
   meta                 0.16
+cinematicexperience:
+  meta-qt5             1.0
 ckermit:
   meta-oe              302
 claws-mail:
@@ -303,15 +307,15 @@ cogl-1.0:
 collectd:
   meta-oe              5.4.1
 common-crosswalk-suite:
-  ?                    1.0.0
+  meta-tizen-common-devtools 1.0.0
 common-graphics-suite:
-  ?                    1.1
+  meta-tizen-common-devtools 1.1
 common-multimedia-suite:
-  ?                    1.0.0
+  meta-tizen-common-devtools 1.0.0
 common-sanity-suite:
-  ?                    1.1
+  meta-tizen-common-devtools 1.1
 common-suite-launcher:
-  ?                    2.1.0
+  meta-tizen-common-devtools 2.1.0
 compat-wireless-all:
   meta-oe              3.6.8
 compositeproto:
@@ -319,11 +323,11 @@ compositeproto:
 concurrencykit:
   meta-oe              0.4.3+gitAUTOINC+900d203aa9
 config-image:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 config-tizen-common:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 config-tizen-ivi:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 connman:
   meta                 1.26
 connman-conf:
@@ -399,9 +403,9 @@ cronie:
 cross-localedef-native:
   meta                 2.20
 crosswalk:
-  ?                    10.38.222.0
+  meta-tizen-common-share 10.38.222.0
 crosswalk-thirdparty:
-  ?                    10.38.222.0
+  meta-tizen-common-share 10.38.222.0
 cryptodev-linux:
   meta                 1.6
 cryptodev-module:
@@ -428,18 +432,18 @@ db:
 dbench:
   meta-oe              4.0
 dbus:
+  meta-tizen-adaptation 1.6.18
   meta                 1.8.2
-  ?                    1.6.18
 dbus-daemon-proxy:
   meta-oe              0.0.0+gitrAUTOINC+1226a0a137
 dbus-glib:
+  meta-tizen-adaptation 0.100.2
   meta                 0.100.2
-  ?                    0.100.2
 dbus-python:
   meta-tizen-common-base 1.1.1
 dbus-test:
+  meta-tizen-adaptation 1.6.18
   meta                 1.8.2
-  ?                    1.6.18
 dbus-wait:
   meta                 0.1+gitAUTOINC+6cc6077a36
 ddrescue:
@@ -456,7 +460,7 @@ depmodwrapper-cross:
 desktop-file-utils:
   meta-tizen-common-base 0.20
 desktop-skin:
-  ?                    2.0
+  meta-tizen-common-demo 2.0
 devicekit-power:
   meta-oe              014
 devmem2:
@@ -493,7 +497,7 @@ distro-feed-configs:
 dlog:
   meta-tizen-common-base 0.4.1
 dlt:
-  ?                    2.11.0
+  meta-tizen-ivi       2.11.0
 dmidecode:
   meta                 2.12
 dmxproto:
@@ -532,23 +536,23 @@ dtc:
 dukgenerator:
   meta-tizen-common-base 1.0.0
 e2fsprogs:
+  meta-tizen-adaptation 1.42.9+gitAUTOINC+bb9cca2ca9
   meta                 1.42.9
-  ?                    1.42.9+gitAUTOINC+bb9cca2ca9
 ecryptfs-utils:
-  ?                    104
+  meta-tizen-ivi       104
 ed:
   meta                 1.9
   meta                 0.5
 edbus:
-  ?                    1.7.8
+  meta-tizen-common-share 1.7.8
 eee-acpi-scripts:
   meta                 1.1.12+gitAUTOINC+9d4cdedca2
 efivar:
   meta-oe              0.7+gitAUTOINC+c9e1f24a81
 efl:
-  ?                    1.9.3
+  meta-tizen-common-share 1.9.3
 efl-theme-tizen-hd:
-  ?                    1.0.204r07
+  meta-tizen-common-share 1.0.204r07
 eglinfo-fb:
   meta                 1.0
 eglinfo-x11:
@@ -556,7 +560,7 @@ eglinfo-x11:
 eject:
   meta-oe              2.1.5
 elementary:
-  ?                    1.9.3
+  meta-tizen-common-share 1.9.3
 elfutils:
   meta                 0.148
   meta                 0.158
@@ -736,9 +740,9 @@ geany:
 gegl:
   meta-oe              0.2.0
 genivi-audio-manager:
-  ?                    6.0
+  meta-tizen-ivi       6.0
 genivi-shell:
-  ?                    0.2.3
+  meta-tizen-ivi       0.2.3
 geoclue:
   meta-oe              2.0.0
 geos:
@@ -829,6 +833,8 @@ gpsd:
   meta-oe              3.10
 gpsd-machine-conf:
   meta-oe              1.0
+gptfdisk:
+  meta                 0.8.10+gitAUTOINC+a920398fa3
 grep:
   meta                 2.19
   meta                 2.5.1a
@@ -935,11 +941,11 @@ guilt-native:
 gummiboot:
   meta                 43+gitAUTOINC+4062c51075
 gupnp:
-  ?                    0.20.5
+  meta-tizen-ivi       0.20.5
 gupnp-av:
-  ?                    0.12.4
+  meta-tizen-ivi       0.12.4
 gupnp-dlna:
-  ?                    0.10.2
+  meta-tizen-ivi       0.10.2
 gypsy:
   meta-oe              0.9
   meta-oe              0.9+gitAUTOINC+be8c9c382d
@@ -977,29 +983,29 @@ hwlatdetect:
 i2c-tools:
   meta                 3.1.1
 ibus:
-  ?                    1.5.4
+  meta-tizen-ivi       1.5.4
 ibus-hangul:
-  ?                    1.4.2
+  meta-tizen-ivi       1.4.2
 ibus-libpinyin:
-  ?                    1.6.92
+  meta-tizen-ivi       1.6.92
 iceauth:
   meta-oe              1.0.4
 icecc-create-env-native:
   meta                 0.1
 ico-uxf-device-input-controller:
-  ?                    0.9.06
+  meta-tizen-ivi       0.9.06
 ico-uxf-homescreen:
-  ?                    0.9.22
+  meta-tizen-ivi       0.9.22
 ico-uxf-homescreen-sample-apps:
-  ?                    0.9.8
+  meta-tizen-ivi       0.9.8
 ico-uxf-utilities:
-  ?                    0.9.07
+  meta-tizen-ivi       0.9.07
 ico-uxf-weston-plugin:
-  ?                    0.9.22
+  meta-tizen-ivi       0.9.22
 ico-vic-amb-plugin:
-  ?                    0.9.5
+  meta-tizen-ivi       0.9.5
 ico-vic-carsimulator:
-  ?                    0.9.10
+  meta-tizen-ivi       0.9.10
 icon-naming-utils:
   meta                 0.8.90
 icon-slicer:
@@ -1058,7 +1064,7 @@ irssi:
 iso-codes:
   meta-oe              1.4
 ivi-sanity-suite:
-  ?                    1.1
+  meta-tizen-common-devtools 1.1
 iw:
   meta-oe              3.15
 jack:
@@ -1092,7 +1098,7 @@ kexec-tools:
 keymaps:
   meta                 1.0
 keyutils:
-  ?                    1.5.3
+  meta-tizen-ivi       1.5.3
 kmod:
   meta                 18+gitAUTOINC+ae58de0fcb
 kmod-native:
@@ -1116,7 +1122,7 @@ ldconfig-native:
 leafpad:
   meta                 0.8.18.1
 lemolo:
-  ?                    0.1.7
+  meta-tizen-common-share 0.1.7
 lemon:
   meta-oe              3.5.4
 leptonica:
@@ -1125,6 +1131,10 @@ less:
   meta                 470
 leveldb:
   meta-oe              1.18+gitAUTOINC+803d69203a
+libICE:
+  meta-tizen-common-share 1.0.8
+libSM:
+  meta-tizen-common-share 1.2.1
 liba52:
   meta                 0.7.4
 libaccounts-svc:
@@ -1149,8 +1159,8 @@ libatomics-ops:
   meta                 7.2
 libav:
   meta-tizen-common-base 9.8
-  meta                 0.8.15
   meta                 9.16
+  meta                 0.8.15
 libbsd:
   meta                 0.7.0
 libc-client:
@@ -1197,8 +1207,8 @@ libdmx:
   meta                 1.1.3 (skipped)
 libdrm:
   meta-tizen-common-base 2.4.52
-  meta                 2.4.54
   meta                 2.4.40+gitAUTOINC+e01d68f9f3
+  meta                 2.4.54
 libdumpvalue-perl:
   meta                 1.17
 libdvdread:
@@ -1248,12 +1258,12 @@ libgcc-initial:
 libgcrypt:
   meta                 1.6.2
 libgee:
+  meta-tizen-ivi       0.10.5
   meta-oe              1:0.6.4
-  ?                    0.10.5
 libgfortran:
+  meta                 4.8 (skipped)
   meta                 4.9 (skipped)
-  meta                 4.8 (skipped)
-  meta                 4.8 (skipped)
+  meta                 4.9 (skipped)
 libglade:
   meta                 2.6.4
 libglu:
@@ -1267,7 +1277,7 @@ libgsasl:
 libgsignon-glib:
   meta-tizen-common-base 2.3.0
 libhangul:
-  ?                    0.1.0
+  meta-tizen-ivi       0.1.0
 libhugetlbfs:
   meta-oe              1:2.18
 libi18n-collate-perl:
@@ -1277,8 +1287,9 @@ libical:
 libice:
   meta                 1.0.9 (skipped)
 libiconv:
-  meta                 1.14 (skipped)
   meta                 1.11.1 (skipped)
+  meta                 1.14 (skipped)
+  meta                 1.14 (skipped)
 libid3tag:
   meta                 0.15.1b
 libidn:
@@ -1393,7 +1404,7 @@ libpcre:
 libpfm4:
   meta                 4.3.0 (skipped)
 libpinyin:
-  ?                    1.0.0
+  meta-tizen-ivi       1.0.0
 libplist:
   meta-oe              1.8
 libpng:
@@ -1471,7 +1482,7 @@ libtapi3:
 libtasn1:
   meta                 4.0
 libtbm:
-  ?                    1.1.0
+  meta-tizen-ivi       1.1.0
 libtelepathy:
   meta                 0.3.3
 libtheora:
@@ -1480,8 +1491,6 @@ libtimedate-perl:
   meta                 2.30
 libtinyxml:
   meta-oe              2.6.2
-libtinyxml2:
-  meta-oe              2.2.0+gitAUTOINC+d211bb1351
 libtirpc:
   meta                 0.2.5
 libtool:
@@ -1638,11 +1647,11 @@ linux-yocto:
 linux-yocto-dev:
   meta                 unknown (skipped)
 linux-yocto-rt:
-  meta                 3.10 (skipped)
   meta                 3.14 (skipped)
-linux-yocto-tiny:
-  meta                 3.17 (skipped)
   meta                 3.10 (skipped)
+linux-yocto-tiny:
+  meta                 3.10 (skipped)
+  meta                 3.17 (skipped)
   meta                 3.14 (skipped)
 linuxdoc-tools-native:
   meta                 0.9.69
@@ -1664,8 +1673,6 @@ lmsensors-config:
   meta-oe              1.0
 lockdev:
   meta-oe              1.0.3+gitAUTOINC+16b899645d
-log4c:
-  meta-oe              1.2.4
 log4cplus:
   meta-oe              1.1.1
 logrotate:
@@ -1728,8 +1735,12 @@ makedevs:
   meta                 1.0.1
 maliit-framework:
   meta-oe              git (skipped)
+maliit-framework-qt5:
+  meta-qt5             0.99.0+gitAUTOINC+17fdf8699c
 maliit-plugins:
   meta-oe              git (skipped)
+maliit-plugins-qt5:
+  meta-qt5             0.99.0+gitAUTOINC+c6a3485926
 man:
   meta                 1.6g
 man-pages:
@@ -1742,8 +1753,8 @@ matchbox-config-gtk:
   meta                 0.0+gitAUTOINC+3ed74dfb7c
 matchbox-desktop:
   meta                 2.0+gitAUTOINC+71e3e6e042
-  meta                 2.0
   meta                 0.9.1
+  meta                 2.0
 matchbox-desktop-sato:
   meta                 0.1+gitAUTOINC+810b0b08eb
 matchbox-keyboard:
@@ -1808,6 +1819,8 @@ meta-toolchain:
   meta                 1.0
 meta-toolchain-qt:
   meta                 1.0
+meta-toolchain-qt5:
+  meta-qt5             1.0
 meta-toolchain-qte:
   meta                 1.0
 mg:
@@ -1839,10 +1852,8 @@ mm-common:
 mmc-utils:
   meta                 0.1
 mobile-broadband-provider-info:
+  meta-tizen-common-share 20120614
   meta                 1:20140618+gitrAUTOINC+d06ebd314a
-  ?                    20120614
-mobile-broadband-provider-info-native:
-  ?                    20120614
 modemmanager:
   meta-oe              0.6.0.0
 modutils-initscripts:
@@ -1877,7 +1888,7 @@ mtools:
 multipath-tools:
   meta-oe              0.5.0+gitaec68ab217
 murphy:
-  ?                    0.0.59
+  meta-tizen-common-share 0.0.59
 mx-1.0:
   meta                 1.4.7+gitAUTOINC+9b1db6b806
 mysql-python:
@@ -1895,19 +1906,21 @@ nativesdk-nettle:
 nativesdk-nspr:
   meta                 4.10.7
 nativesdk-nss:
-  meta                 3.17
+  meta                 3.17.2
 nativesdk-openssl:
   meta                 1.0.1j
 nativesdk-opkg:
   meta                 1:0.2.2
 nativesdk-opkg-utils:
-  meta                 0.1.8+gitAUTOINC+eae0d8fa44
+  meta                 0.1.8+gitAUTOINC+762d9dadce
 nativesdk-orc:
   meta                 0.4.18
 nativesdk-ossp-uuid:
   meta                 1.6.2
 nativesdk-packagegroup-qt-toolchain-host:
   meta                 1.0
+nativesdk-packagegroup-qt5-toolchain-host:
+  meta-qt5             1.0
 nativesdk-packagegroup-qte-toolchain-host:
   meta                 1.0
 nativesdk-packagegroup-sdk-host:
@@ -1931,8 +1944,8 @@ nativesdk-protobuf:
   meta-oe              2.4.1
 nativesdk-pseudo:
   meta                 1.6.0+gitAUTOINC+36689a76e7
-  meta                 1.5.1
   meta                 1.6.2
+  meta                 1.5.1
 nativesdk-python:
   meta                 2.7.3
 nativesdk-python-async:
@@ -1962,6 +1975,12 @@ nativesdk-qemu-helper:
   meta                 1.0
 nativesdk-qt4-tools:
   meta                 4.8.6
+nativesdk-qtbase:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+06e706bdbb
+nativesdk-qttools:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+f3abe81d51
 nativesdk-randrproto:
   meta                 1:1.4.0
 nativesdk-readline:
@@ -1998,7 +2017,7 @@ nativesdk-tar-replacement-native:
 nativesdk-tclap:
   meta-oe              1.2.1
 nativesdk-u-boot-mkimage:
-  meta                 v2013.07+gitAUTOINC+62c175fbb8
+  meta                 v2014.07+gitAUTOINC+524123a707
 nativesdk-unfs3:
   meta                 0.9.22.r490
 nativesdk-uthash:
@@ -2051,17 +2070,18 @@ nfs-export-root:
 nfs-utils:
   meta                 1.3.0
 ninja-native:
-  ?                    1.4.0
+  meta-tizen-adaptation 1.4.0
+  meta-qt5             1.4.0
 nmon:
   meta-oe              13g
 node-startup-controller:
-  ?                    1.0.2
+  meta-tizen-ivi       1.0.2
 nodejs:
   meta-oe              0.8.18
 nodejs4:
   meta-oe              0.4.12
 notification:
-  ?                    0.2.3
+  meta-tizen-ivi       0.2.3
 npth:
   meta                 1.0
 nss-myhostname:
@@ -2077,11 +2097,9 @@ obexftp:
 ode:
   meta-oe              0.13
 ofono:
-  meta                 1.15
+  meta-tizen-common-share 1.14
   meta                 0.12-gitAUTOINC+14544d5996
-  ?                    1.14
-ofono-native:
-  ?                    1.14
+  meta                 1.15
 oh-puzzles:
   meta                 0.2+gitAUTOINC+92f1a20e4b
 oma-ds-agent:
@@ -2192,6 +2210,10 @@ packagegroup-fonts-truetype:
   meta-oe              1.0
 packagegroup-qt-toolchain-target:
   meta                 1.0
+packagegroup-qt5-qtcreator-debug:
+  meta-qt5             1.0
+packagegroup-qt5-toolchain-target:
+  meta-qt5             1.0
 packagegroup-qte-toolchain-target:
   meta                 1.0
 packagegroup-sdk-target:
@@ -2199,15 +2221,15 @@ packagegroup-sdk-target:
 packagegroup-self-hosted:
   meta                 1.0
 packagegroups-ivi-Modello:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 packagegroups-ivi-ico:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 packagegroups-tizen-crosswalk:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 packagegroups-tizen-dev:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 packagegroups-tizen-fonts:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 packagekit:
   meta-oe              0.5.6
 pam:
@@ -2240,7 +2262,7 @@ perf:
 perl-native:
   meta                 5.20.0
 phoned:
-  ?                    0.0.0
+  meta-tizen-ivi       0.0.0
 phonet-utils:
   meta-oe              0.0.0+gitrAUTOINC+4acfa720fd
 phoronix-test-suite:
@@ -2316,7 +2338,7 @@ proj:
 proxy-libintl:
   meta-oe              20100902
 ps-mem:
-  ?                    git
+  meta-tizen-adaptation git
 psmisc:
   meta                 22.21
 psplash:
@@ -2331,7 +2353,7 @@ pulseaudio:
   meta-tizen-common-base 5.0
   meta                 5.0
 pulseaudio-module-murphy-ivi:
-  ?                    0.9.32
+  meta-tizen-ivi       0.9.32
 puzzles:
   meta                 r10116
 pv:
@@ -2371,7 +2393,7 @@ python-pyrex:
 python-pyrex-native:
   meta                 0.9.9
 python-requests:
-  ?                    2.2.1
+  meta-tizen-common-devtools 2.2.1
 python-scons:
   meta                 2.3.2
 python-scons-native:
@@ -2400,6 +2422,8 @@ qextserialport:
   meta-oe              1.1+1.2rc
 qmmp:
   meta                 0.7.7
+qsiv:
+  meta-qt5             1.1
 qt-creator:
   meta-oe              2.8.1
 qt-demo-init:
@@ -2408,6 +2432,8 @@ qt-mobility-embedded:
   meta                 1.2.0
 qt-mobility-x11:
   meta                 1.2.0
+qt3d:
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+8a9723d742
 qt4-embedded:
   meta                 4.8.6
 qt4-graphics-system:
@@ -2418,14 +2444,107 @@ qt4-x11-free:
   meta                 4.8.6
 qt4e-demo-image:
   meta                 1.0
+qt5-demo-extrafiles:
+  meta-qt5             1.0
+qt5everywheredemo:
+  meta-qt5             1.0
+qt5ledscreen:
+  meta-qt5             1.0
+qt5nmapcarousedemo:
+  meta-qt5             1.0
+qt5nmapper:
+  meta-qt5             1.0
+qtbase:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+06e706bdbb
+qtbase-native:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+06e706bdbb
+qtconnectivity:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+4a6d4e8682
+qtdeclarative:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+d767254ee0
+qtenginio:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+f8ad37de2d
+qtgraphicaleffects:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+9e9600d922
+qtimageformats:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+fef13b3b4c
+qtlocation:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+eebf55a691
+qtmultimedia:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+b366a99eb1
+qtquick1:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+61df13088c
+qtquickcontrols:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+737379ad81
+qtscript:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+9871b41531
+qtsensors:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+ff98a9a27a
+qtserialport:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+3bb682ea29
 qtserialport-e:
   meta-oe              5.1.0
+qtsmarthome:
+  meta-qt5             1.0
+qtsvg:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+9f1c31c8a3
+qtsystems:
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+aa651c73bf
+qttools:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+f3abe81d51
+qttools-native:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+f3abe81d51
+qtwayland:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+c3d2a7bd8a
+qtwayland-native:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+c3d2a7bd8a
+qtwebengine:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+qtwebengine
+qtwebkit:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+7778f881ff
+qtwebkit-examples:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+70bd4d5253
+qtwebsockets:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+0854eda408
+qtx11extras:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+a21bbb4501
+qtxmlpatterns:
+  meta-qt5             5.3.2
+  meta-qt5             5.3.99+5.4.0-beta1+gitAUTOINC+045028f951
 quicky:
   meta                 0.4
 quilt:
   meta                 0.63
 quilt-native:
   meta                 0.63
+quitbattery:
+  meta-qt5             1.0.0
+quitindicators:
+  meta-qt5             1.0.1
 quota:
   meta                 4.01
 qwt:
@@ -2458,9 +2577,9 @@ rpcbind:
   meta                 0.2.1
 rpm:
   meta-tizen-common-base 4.11.0.1
+  meta                 5.4+cvs
   meta                 5.4.14
   meta                 4.11.2
-  meta                 5.4+cvs
 rrdtool:
   meta-oe              1.4.8
 rsnapshot:
@@ -2474,12 +2593,14 @@ rt-tests:
   meta                 0.89
 rtorrent:
   meta-oe              0.9.3
+ruby:
+  meta-ruby            1.9.3-p547
 run-postinsts:
   meta                 1.0
 rxvt-unicode:
   meta                 9.20
 rygel:
-  ?                    0_22_0
+  meta-tizen-ivi       0_22_0
 s3c24xx-gpio:
   meta-oe              1.0+svnr4949
 s3c64xx-gpio:
@@ -2533,8 +2654,6 @@ shadow-sysroot:
   meta                 4.2.1
 shared-mime-info:
   meta                 1.3
-sharutils:
-  meta-oe              4.14
 shutdown-desktop:
   meta                 1.0
 sip-native:
@@ -2772,9 +2891,9 @@ tesseract-lang-ukr:
 tesseract-lang-vie:
   meta-oe              3.02
 testkit-lite:
-  ?                    3.1.7
+  meta-tizen-common-devtools 3.1.7
 testkit-stub:
-  ?                    1.0
+  meta-tizen-common-devtools 1.0
 texi2html:
   meta                 5.0
 texinfo:
@@ -2794,29 +2913,29 @@ tiobench:
 tipcutils:
   meta-oe              2.0.6
 tizen-common-core-image-crosswalk:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-common-core-image-crosswalk-dev:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-common-core-image-minimal:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-common-core-image-minimal-dev:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-core-image-minimal:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-extensions-crosswalk:
-  ?                    0.110
+  meta-tizen-common-share 0.110
 tizen-ivi-Modello-image:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-ivi-Modello-image-dev:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-ivi-core-image:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-ivi-core-image-dev:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-ivi-ico-image:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-ivi-ico-image-dev:
-  ?                    1.0
+  meta-tizen-common-demo 1.0
 tizen-platform-config:
   meta-tizen-common-base 2.0
 tizen-platform-wrapper:
@@ -2828,7 +2947,7 @@ tmux:
 toscoterm:
   meta-oe              git
 toybox:
-  meta-oe              0.5.0
+  meta-oe              0.4.9
 trace-cmd:
   meta                 2.3.2+gitAUTOINC+79e08f8edb
 tremor:
@@ -2859,18 +2978,20 @@ ttf-ubuntu-font-family:
   meta-oe              0.80
 ttf-wqy-zenhei:
   meta-oe              0.6.26
+tufao:
+  meta-qt5             1.2.1+AUTOINC+a4832b4c94
 twm:
   meta-oe              1.0.6
 tzcode-native:
-  meta                 2014i
+  meta                 2014j
 tzdata:
-  meta                 2014i
+  meta                 2014j
 u-boot:
-  meta                 2013.07 (skipped)
+  meta                 2014.07 (skipped)
 u-boot-fw-utils:
-  meta                 2013.07 (skipped)
+  meta                 2014.07 (skipped)
 u-boot-fw-utils-cross:
-  meta                 2013.07 (skipped)
+  meta                 2014.07 (skipped)
 uclibc:
   meta                 git (skipped)
 uclibc-initial:
@@ -2925,7 +3046,7 @@ v86d:
   meta                 0.1.10
 vala:
   meta-tizen-common-base 0.24.0
-  meta                 0.24.0
+  meta                 0.26.1
 vala-dbus-binding-tool:
   meta-oe              1:0.4.0
   meta-oe              1:0.4.0+gitrAUTOINC+53d56816a4
@@ -2940,7 +3061,7 @@ vconf-internal-keys:
 videoproto:
   meta                 1:2.3.2
 vim:
-  meta-oe              7.4.481
+  meta-oe              7.4.373
 volatile-binds:
   meta                 1.0
 vte:
@@ -2954,7 +3075,7 @@ wavpack:
 wayland:
   meta                 1.6.0
 wayland-fits-master:
-  ?                    0.2.2
+  meta-tizen-common-devtools 0.2.2
 wbxml2:
   meta-oe              0.10.8
 webkit-gtk:
@@ -2965,14 +3086,14 @@ weston:
   meta-tizen-common-base 1.5.0
   meta                 1.6.0
 weston-common:
-  ?                    1
+  meta-tizen-common-demo 1
 weston-init:
+  meta-tizen-adaptation 1.0
   meta                 1.0
-  ?                    1.0
 weston-ivi:
-  ?                    1
+  meta-tizen-ivi       1
 weston-ivi-shell:
-  ?                    0.1.7
+  meta-tizen-ivi       0.1.7
 which:
   meta                 2.20
   meta                 2.18
@@ -2983,7 +3104,7 @@ wmiconfig:
 wpa-supplicant:
   meta                 2.2
 wrt-widgets:
-  ?                    0.1
+  meta-tizen-common-demo 0.1
 wvdial:
   meta-oe              1.61
 wvstreams:
@@ -3144,6 +3265,9 @@ xsp:
 xterm:
   meta-oe              303
 xtrans:
+  meta-tizen-common-share 1.3.4
+  meta                 1.3.4 (skipped)
+  meta                 1.3.4 (skipped)
   meta                 1.3.4 (skipped)
 xtscal:
   meta                 0.6.3
