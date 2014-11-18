@@ -30,7 +30,6 @@ gssdp	TC-1931
 gstreamer	TC-2108
 gupnp	TC-1929
 gupnp-av	TC-1930
-harfbuzz	TC-1829
 iptables	TC-1830
 json-c	TC-1831
 json-glib	TC-1919
