@@ -20,6 +20,7 @@ fontconfig	TC-1818
 gawk	TC-1819
 gdbm	TC-1821
 git	TC-1823
+glib-2.0  TC-2124
 glib-networking	TC-1824
 gnome-common	TC-1916
 gnutls	TC-1827
