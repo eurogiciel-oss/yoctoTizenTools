@@ -79,7 +79,6 @@ sed	TC-1869
 shared-mime-info	TC-1870
 sudo	TC-1871
 swig	TC-1872
-syslinux	TC-1873
 tcl TC-1028
 tiff	TC-1874
 tzdata	TC-1875
