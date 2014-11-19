@@ -78,6 +78,7 @@ screen	TC-2059
 sed	TC-1869
 shared-mime-info	TC-1870
 sudo	TC-1871
+systemd	TC-2026
 swig	TC-1872
 tcl	TC-1028
 tiff	TC-1874
