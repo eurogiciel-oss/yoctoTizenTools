@@ -81,7 +81,6 @@ sudo	TC-1871
 systemd	TC-2026
 swig	TC-1872
 tcl	TC-1028
-tiff	TC-1874
 tzdata	TC-1875
 usbutils	TC-1876
 util-macros	TC-1877
