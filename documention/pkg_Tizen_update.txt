@@ -2,7 +2,6 @@ acl	TC-1797
 acpid	TC-1798
 alsa-lib	TC-1799
 alsa-utils	TC-1800
-atk	TC-1801
 avahi	TC-1914
 bison	TC-1803
 boost	TC-1804
