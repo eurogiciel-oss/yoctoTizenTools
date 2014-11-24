@@ -62,7 +62,7 @@
  
  <!-- Base/Startup -->
  <!-- systemd https://review.tizen.org/gerrit/29920  -->
- <project name="platform/upstream/systemd"  revision="f1a985d567a9094ef916d59d8e528810bdbffc0a" />
+ <project name="platform/upstream/systemd"  revision="c9f3992581011a5dde3b1b03819bedb3d2579076" />
  
  <!-- base/device_management -->
  <!-- system-server https://review.tizen.org/gerrit/#/c/28168/  -->
