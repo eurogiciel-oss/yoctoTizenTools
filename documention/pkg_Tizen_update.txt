@@ -37,7 +37,6 @@ kmod	TC-1921
 less	TC-1922
 libassuan	TC-1923
 libav	TC-1832
-libffi	TC-1834
 libgcrypt	TC-1924
 libpcap	TC-1839
 libpciaccess	TC-1840
@@ -62,7 +61,6 @@ nettle	TC-1856
 ofono	TC-1857
 openssh	TC-1858
 orc	TC-1860
-p11-kit	TC-1927
 pango	TC-1861
 perl	TC-1862
 pixman	TC-1863
