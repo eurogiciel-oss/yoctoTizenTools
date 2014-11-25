@@ -39,7 +39,6 @@ libassuan	TC-1923
 libav	TC-1832
 libffi	TC-1834
 libgcrypt	TC-1924
-libical	TC-1925
 libpcap	TC-1839
 libpciaccess	TC-1840
 libpng	TC-1841
