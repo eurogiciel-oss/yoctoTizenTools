@@ -112,7 +112,7 @@ test_parameter IMAGE_NAME "${IMAGE_NAME}"
 test_parameter YOCTO_PART "${YOCTO_PART}"
 
 if [ -z "${DEPLOY_DIR}" ]; then
-    DEPLOY_DIR="${WORKINGDIR}/poky/${BUILD_PRJ}/tmp/deploy/images/${MACHINE}"
+    DEPLOY_DIR="${WORKINGDIR}/poky/${BUILD_PRJ}/tmp-glibc/deploy/images/${MACHINE}"
     IMAGE_FILE="${DEPLOY_DIR}/${IMAGE_NAME}-${MACHINE}.ext3"
     KERNEL_FILE="${DEPLOY_DIR}/bzImage"
 else

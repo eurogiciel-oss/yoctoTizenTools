@@ -242,6 +242,7 @@ case ${MACHINE} in
     ;;
 esac
 
+change_conf_default_value "DISTRO ?=" "DISTRO = \"tizen\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 change_conf_default_value "MACHINE ??=" "MACHINE = \"${MACHINE}\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 change_conf_default_value "DL_DIR ?= " "DL_DIR = ${WORKINGDIR}/poky/downloads" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
 change_conf_default_value "#OE_TERMINAL = " "OE_TERMINAL = \"screen\"" "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/local.conf"
