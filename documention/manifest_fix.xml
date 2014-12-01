@@ -59,6 +59,8 @@
  <project name="platform/upstream/dbus-python"  revision="a8f0e5c73d4bbf6068a598971ad24135a881fab9" />
  <!-- pam https://review.tizen.org/gerrit/30617 -->
  <project name="platform/upstream/pam"  revision="523d88f2bf88a131d6b4a334e85d2666d505dc48" />
+ <!-- rpm https://review.tizen.org/gerrit/31131 -->
+ <project name="platform/upstream/rpm"  revision="beaf75391c4da89c2c7d399b4027a1c5a91f5f86" />
  
  <!-- Base/Startup -->
  <!-- systemd https://review.tizen.org/gerrit/29920  -->
