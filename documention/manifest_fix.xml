@@ -109,6 +109,8 @@
  <!-- Multimedia/Audio FW -->
  <!-- libmedia-service https://review.tizen.org/gerrit/28225 -->
  <project name="platform/core/multimedia/libmedia-service"  revision="b7f1f1ec421c16a4e6fea164495c281887a5d3b8" />
+ <!-- pulseaudio https://review.tizen.org/gerrit/31169 -->
+ <project name="platform/upstream/pulseaudio"  revision="9f3f3d9dfe4449a019945f65002f714aa49dcc2d" />
 
 
  <!-- Multimedia/Libraries -->
