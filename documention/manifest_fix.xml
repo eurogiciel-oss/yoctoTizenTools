@@ -131,6 +131,8 @@
  <project name="platform/core/connectivity/nfc-manager-neard"  revision="45f2831a6d738c5df32b065c6853636fea85f42a" />
  <!-- bluetooth-frwk https://review.tizen.org/gerrit/31191 -->
  <project name="platform/core/connectivity/bluetooth-frwk"  revision="903f4abdc198a6360e7f02a8cc6b876a2f463d2a" />
+ <!-- bluetooth-tools https://review.tizen.org/gerrit/31193 -->
+ <project name="platform/core/connectivity/bluetooth-tools"  revision="ecb6831625572976a78a5ebdbe32fa0c0dfdb45e" />
  
  
  <!-- Security/Accounts -->
