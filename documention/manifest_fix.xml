@@ -151,6 +151,11 @@
  <!-- libwbxml2 https://review.tizen.org/gerrit/28066 -->
  <project name="platform/upstream/libwbxml2"  revision="717cf1e3430cacd4c0ba04394b8f60f1e4ad4900" />
  
+ <!-- Testing -->
+ <!-- testkit-lite https://review.tizen.org/gerrit/31164 -->
+ <project name="test/tools/testkit-lite"  revision="da799487c06614bf07afd6006f2a57520f3f036c" />
+ 
+ 
  <!-- Graphics & UI Framework/EFL -->
  <!-- edbus https://review.tizen.org/gerrit/28161 -->
  <project name="platform/upstream/edbus" revision="26ff9807ff9364ed035c38fc909d3e7a3c85320b" />
