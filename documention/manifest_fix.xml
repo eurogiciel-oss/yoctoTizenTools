@@ -107,7 +107,7 @@
  
  <!-- Multimedia/Media Service -->
  <!-- libmm-log https://review.tizen.org/gerrit/31006/ -->
- <project name="platform/core/multimedia/libmm-log"  revision="ad89726fe01811181a71a28312dc04aef24b124f" />
+ <project name="platform/core/multimedia/libmm-log"  revision="9e5e5b23416d9a169c587a25a7653fa884444f74" />
  
  <!-- Multimedia/Audio FW -->
  <!-- libmedia-service https://review.tizen.org/gerrit/28225 -->
