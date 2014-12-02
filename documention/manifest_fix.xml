@@ -40,7 +40,8 @@
  <project name="apps/core/preloaded/libslp-memo"  revision="2d7a05e35636d8a379f4f2eaac3b180c51e18592" />
  <!-- pkgmgr https://review.tizen.org/gerrit/28226 -->
  <project name="platform/core/appfw/slp-pkgmgr"  revision="6f045429815c83046d9e44f3f1005122fb78bc16" />
-
+ <!-- status https://review.tizen.org/gerrit/31186 -->
+ <project name="platform/core/appfw/status"  revision="bebaf1fd70a6b15dbb428f223e75811a83ece711" />
  
  <!-- App Framework/Configuration -->
  <!-- vconf https://review.tizen.org/gerrit/28147 -->
