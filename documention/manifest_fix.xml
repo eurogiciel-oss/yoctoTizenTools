@@ -83,6 +83,8 @@
  <project name="platform/upstream/ibus"  revision="d474a5c218f8630192ee2bea8d321c245e2c2b89" />
  <!-- libdrm https://review.tizen.org/gerrit/28530 -->
  <project name="platform/upstream/libdrm"  revision="2a8aaf2b9f403cde35b88653394906af578845ab" />
+ <!-- efl-theme-tizen https://review.tizen.org/gerrit/31175 -->
+ <project name="platform/core/uifw/efl-theme-tizen"  revision="49873649c3970d5c3cbbd45ef1d141eda696f50d" />
  
  <!-- Graphics and UI Framework/Input Framework -->
  <!-- libhangul https://review.tizen.org/gerrit/27601 -->
