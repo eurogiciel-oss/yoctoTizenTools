@@ -44,7 +44,7 @@ while test $# -gt 0; do
     *-verbose)
       VERBOSE=$2
       shift
-      shifti
+      shift
     ;;
     *-config)
       CONFIG_FILE=$2
@@ -211,7 +211,8 @@ source oe-init-build-env ${BUILD_PRJ}
   
 echo add and remove meta 
 echo --------------    
-add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-adaptation "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-adaptation-meta-oe "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
+add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-adaptation-oe-core "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-base "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-demo "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
 add_meta_to_bblayers ${WORKINGDIR}/meta-tizen/meta-tizen-common-devtools "${WORKINGDIR}/poky/${BUILD_PRJ}/conf/bblayers.conf"
