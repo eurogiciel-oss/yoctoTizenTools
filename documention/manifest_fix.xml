@@ -194,6 +194,8 @@
  <project name="platform/core/appfw/aul-1" revision="6a5c0b16ac45835babaca4fc8984bbf27469725c" />
  <!-- security-server https://review.tizen.org/gerrit/28739 -->
  <project name="platform/core/security/security-server" revision="ae009054afbe5b8885da76af1a8127daa63742f6" />
+ <!-- libwbxml2 https://review.tizen.org/gerrit/31170 -->
+ <project name="platform/upstream/libwbxml2" revision="e7ff0d80b8638cd60e06be6d8a3c9364b617ffb1" />
  
  <!-- ico-vic-carsimulator https://review.tizen.org/gerrit/28957 -->
  <project name="profile/ivi/ico-vic-carsimulator" revision="bf9beedad80666c9ddff39154e6fc741bbaed5e4" />
