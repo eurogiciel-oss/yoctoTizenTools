@@ -171,7 +171,7 @@
  
  <!-- System/Service -->
  <!-- murphy https://review.tizen.org/gerrit/28042 -->
- <project name="profile/ivi/murphy" revision="ec834e4a57bf4a9ea63554e2bf3b247b666fe347" />
+ <project name="profile/ivi/murphy" revision="b9d006e4db4bc964e5acad83feab71e00d34968d" />
  
  <!-- Base/Utilities -->
  <!-- gconf-dbus https://review.tizen.org/gerrit/28439 -->
