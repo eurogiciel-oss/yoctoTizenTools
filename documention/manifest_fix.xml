@@ -102,7 +102,7 @@
  <!-- avsystem https://review.tizen.org/gerrit/28140 -->
  <project name="platform/core/multimedia/avsystem"  revision="e2bc7b88d123b0ff997061e9a4998106f7f5c3f3" />
  <!-- libmm-utility https://review.tizen.org/gerrit/28154 -->
- <project name="platform/core/multimedia/libmm-utility"  revision="2478d64176e02c32bdd12ba2ed58a57a4faeada0" />
+ <project name="platform/core/multimedia/libmm-utility"  revision="4295b93e417e4734c90639d20ff6c60b110172d7" />
  
  <!-- Multimedia/Media Service -->
  <!-- libmm-log https://review.tizen.org/gerrit/28139 -->
