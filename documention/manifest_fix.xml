@@ -37,7 +37,7 @@
  <!-- App Framework -->
  <!-- applications -->
  <!-- libslp-memo https://review.tizen.org/gerrit/28067 -->
- <project name="apps/core/preloaded/libslp-memo"  revision="5b9cfdc3280cb1aeb694a0fcfadd0c8512492187" />
+ <project name="apps/core/preloaded/libslp-memo"  revision="2d7a05e35636d8a379f4f2eaac3b180c51e18592" />
  <!-- pkgmgr https://review.tizen.org/gerrit/28226 -->
  <project name="platform/core/appfw/slp-pkgmgr"  revision="6f045429815c83046d9e44f3f1005122fb78bc16" />
 
