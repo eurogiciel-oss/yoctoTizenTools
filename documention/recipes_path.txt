@@ -158,6 +158,7 @@ node-startup-controller	meta-tizen-ivi/recipes-automotive/node-startup-controlle
 notification	meta-tizen-ivi/recipes-framework/notification
 ofono	meta-tizen-common-share/recipes-connectivity/ofono
 oma-ds-agent	meta-tizen-common-base/recipes-core/oma-ds-agent
+opencore-amr  meta-tizen-common-base/recipes-connectivity/opencore-amr
 pam	meta-tizen-common-base/recipes-extended/pam
 phoned	meta-tizen-ivi/recipes-modello/phoned
 pims-ipc	meta-tizen-common-base/recipes-social/pims-ipc
