@@ -7,8 +7,6 @@
  <project name="platform/framework/web/crosswalk" revision="715ce55f9def9e994dbb3dc5b08d3c61afcaa6cd" />
  
  <!-- Merged NOT submitted On IVI-->
- <!-- lemolo https://review.tizen.org/gerrit/28310 -->
- <project name="profile/ivi/lemolo" revision="b04fcc0601b9b7d9e0bc1d90d23a4166ce3fa6a6" />
  
  <!-- Merged NOT submitted On Common-->
  <!-- gsignond-plugin-sasl https://review.tizen.org/gerrit/28162 -->
