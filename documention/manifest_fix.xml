@@ -39,8 +39,8 @@
  <project name="platform/core/appfw/app-checker" revision="70200243a1e419ff81a30fa8a436571422a33a3d" />
  <!-- aul-1 https://review.tizen.org/gerrit/28726 -->
  <project name="platform/core/appfw/aul-1" revision="6a5c0b16ac45835babaca4fc8984bbf27469725c" />
- <!-- weston-common https://review.tizen.org/gerrit/31766/ -->
- <project name="profile/common/weston-common" revision="8e9a27c72b43f4a0d8edd0f10b476cf3bc378abc" />
+ <!-- weston-common https://review.tizen.org/gerrit/31770/ -->
+ <project name="profile/common/weston-common" revision="bba9e6c2ec15757449e129454efb97b4a16925aa" />
  
  <!-- +2 but not merge -->
 
