@@ -48,8 +48,9 @@ while test $# -gt 0; do
       SSH_COMMAND=
       shift
     ;;
-    *-image_src_dir)
-      DEPLOY_DIR=$2
+    *-image_src)
+      DEPLOY_DIR=$(dirname $2)
+      IMAGE_FILE=$2
       shift
       shift
     ;;
@@ -120,15 +121,6 @@ else
         echo \"${DEPLOY_DIR}\" is not a path directory.
         exit 1
     fi
-    if [ $(find "${DEPLOY_DIR}" -type f -name *.ext3 | wc -l) -eq 0 ]; then
-        echo Can\'t find any file \".ext3\" into directory \"${DEPLOY_DIR}\".
-        exit 1
-    fi
-    if [ $(find "${DEPLOY_DIR}" -type f -name *.ext3 | wc -l) -ne 1 ]; then
-        echo Too many files \".ext3\" into directory \"${DEPLOY_DIR}\".
-        exit 1
-    fi
-    IMAGE_FILE=$(ls  "${DEPLOY_DIR}/*.ext3")
     KERNEL_FILE="${DEPLOY_DIR}/bzImage"
 fi
 
@@ -161,7 +153,7 @@ fi
 
 ${SSH_COMMAND} rm -fr /${YOCTO_PART}/*
 ${SSH_COMMAND} mkdir -p /mnt/${YOCTO_PART}_EXT3
-${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/${IMAGE_NAME}-${MACHINE}.ext3"  /mnt/${YOCTO_PART}_EXT3
+${SSH_COMMAND} mount "${REMOTE_WORKINGDIR_DOWNLOADS}/$(basename ${IMAGE_FILE})"  /mnt/${YOCTO_PART}_EXT3
 ${SSH_COMMAND} cp -ar  /mnt/${YOCTO_PART}_EXT3/*  /${YOCTO_PART}
 ${SSH_COMMAND} umount /mnt/${YOCTO_PART}_EXT3
 ${SSH_COMMAND} cp -aL "${REMOTE_WORKINGDIR_DOWNLOADS}/bzImage" /boot/bzImage_yoctoTizen
