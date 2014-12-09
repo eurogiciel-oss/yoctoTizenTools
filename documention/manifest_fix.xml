@@ -68,7 +68,7 @@
  <!-- ppl https://review.tizen.org/gerrit/27891 -->
  <project name="platform/upstream/ppl"  revision="80f9727a1037f97cef51a371d298a286e20961e3" />
  <!-- dbus-python https://review.tizen.org/gerrit/28120 -->
- <project name="platform/upstream/dbus-python"  revision="a8f0e5c73d4bbf6068a598971ad24135a881fab9" />
+ <project name="platform/upstream/dbus-python"  revision="d3f0ade3c2e6d096fc84bd676cd87f2726a3108e" />
  
  <!-- Base/Startup -->
  <!-- systemd https://review.tizen.org/gerrit/29920  -->
