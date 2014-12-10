@@ -159,8 +159,8 @@
  <project name="platform/upstream/libwbxml2"  revision="717cf1e3430cacd4c0ba04394b8f60f1e4ad4900" />
  <!-- gumd https://review.tizen.org/gerrit/31798 -->
  <project name="platform/upstream/gumd"  revision="f247444ac80494744acf7e5678482398f4f0adee" />
- <!-- tlm https://review.tizen.org/gerrit/#/c/31803/ -->
- <project name="platform/core/system/tlm"  revision="ad15500a20f281bda4c0aa77cc6744ea7aa8a7d7" />
+ <!-- tlm https://review.tizen.org/gerrit/31821 -->
+ <project name="platform/core/system/tlm"  revision="750c73687bbfa61fc564b7078075407cb9d97b38" />
  
  
  
