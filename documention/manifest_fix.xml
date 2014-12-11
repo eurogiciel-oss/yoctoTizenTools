@@ -37,8 +37,6 @@
  <project name="platform/upstream/edbus" revision="26ff9807ff9364ed035c38fc909d3e7a3c85320b" />
  <!-- app-checker https://review.tizen.org/gerrit/28725 -->
  <project name="platform/core/appfw/app-checker" revision="70200243a1e419ff81a30fa8a436571422a33a3d" />
- <!-- aul-1 https://review.tizen.org/gerrit/28726 -->
- <project name="platform/core/appfw/aul-1" revision="6a5c0b16ac45835babaca4fc8984bbf27469725c" />
  <!-- weston-common https://review.tizen.org/gerrit/31770/ -->
  <project name="profile/common/weston-common" revision="bba9e6c2ec15757449e129454efb97b4a16925aa" />
  
