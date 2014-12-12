@@ -159,7 +159,8 @@
  <project name="platform/upstream/gumd"  revision="f247444ac80494744acf7e5678482398f4f0adee" />
  <!-- tlm https://review.tizen.org/gerrit/31821 -->
  <project name="platform/core/system/tlm"  revision="750c73687bbfa61fc564b7078075407cb9d97b38" />
- 
+ <!-- libmedia-thumbnail https://review.tizen.org/gerrit/31933 -->
+ <project name="platform/core/multimedia/libmedia-thumbnail"  revision="b97d0b8ec596a5e17dbec92fd4e487ec9a91f8ef" />
  
  
  <!-- Testing -->
