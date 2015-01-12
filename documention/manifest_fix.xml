@@ -11,6 +11,8 @@
  <project name="profile/ivi/murphy" revision="b9d006e4db4bc964e5acad83feab71e00d34968d" />
  <!-- ico-vic-carsimulator https://review.tizen.org/gerrit/28957 -->
  <project name="profile/ivi/ico-vic-carsimulator" revision="bf9beedad80666c9ddff39154e6fc741bbaed5e4" />
+ <!-- genivi-audio-manager https://review.tizen.org/gerrit/27879 -->
+ <project name="profile/ivi/genivi/genivi-audio-manager"  revision="e73abf1288387f6c0d58cde8ac48a1950062294b" />
  
  <!-- Merged NOT submitted On Common-->
  <!-- gsignond-plugin-sasl https://review.tizen.org/gerrit/28162 -->
@@ -39,6 +41,34 @@
  <project name="platform/core/appfw/app-checker" revision="70200243a1e419ff81a30fa8a436571422a33a3d" />
  <!-- weston-common https://review.tizen.org/gerrit/31770/ -->
  <project name="profile/common/weston-common" revision="bba9e6c2ec15757449e129454efb97b4a16925aa" />
+ <!-- common-multimedia-suite https://review.tizen.org/gerrit/29420 -->
+ <project name="test/common/common-multimedia-suite" revision="0a75992bd0357284a47973ebba5264bc2f18e8b6" />
+ <!-- common https://review.tizen.org/gerrit/28680 -->
+ <project name="platform/core/api/common" revision="09b56a10f65dd1869c2d1ea987190fa9d9cafd69" />
+ <!-- testkit-lite https://review.tizen.org/gerrit/31164 -->
+ <project name="test/tools/testkit-lite"  revision="da799487c06614bf07afd6006f2a57520f3f036c" />
+ <!-- gumd https://review.tizen.org/gerrit/31798 -->
+ <project name="platform/upstream/gumd"  revision="f247444ac80494744acf7e5678482398f4f0adee" />
+ <!-- python-pygments https://review.tizen.org/gerrit/27847 -->
+ <project name="platform/upstream/python-pygments"  revision="1c7de0a40c2763b3bd3f611462f9b6e856a347a5" />
+ <!-- pulseaudio https://review.tizen.org/gerrit/31169 -->
+ <project name="platform/upstream/pulseaudio"  revision="9f3f3d9dfe4449a019945f65002f714aa49dcc2d" />
+ <!-- libmm-log https://review.tizen.org/gerrit/31006/ -->
+ <project name="platform/core/multimedia/libmm-log"  revision="9e5e5b23416d9a169c587a25a7653fa884444f74" />
+ <!-- libmm-utility https://review.tizen.org/gerrit/28154 -->
+ <project name="platform/core/multimedia/libmm-utility"  revision="4295b93e417e4734c90639d20ff6c60b110172d7" />
+ <!-- libmm-player https://review.tizen.org/gerrit/28123 -->
+ <project name="platform/core/multimedia/libmm-player"  revision="d396a30a561a0db96094560b21e24e99029481c0" />
+ <!-- libhangul https://review.tizen.org/gerrit/27601 -->
+ <project name="platform/core/uifw/libhangul"  revision="2fe339978867090f76ae0ebb1b1863e374b63ee2" />
+ <!-- libdrm https://review.tizen.org/gerrit/28530 -->
+ <project name="platform/upstream/libdrm"  revision="2a8aaf2b9f403cde35b88653394906af578845ab" />
+ <!-- ibus https://review.tizen.org/gerrit/27947 -->
+ <project name="platform/upstream/ibus"  revision="d474a5c218f8630192ee2bea8d321c245e2c2b89" />
+ <!-- ecryptfs https://review.tizen.org/gerrit/#/c/27842/  -->
+ <project name="platform/upstream/ecryptfs-utils"  revision="f496d10d2711cbb2b9d3f7600756487df383e737" />
+ <!-- ppl https://review.tizen.org/gerrit/27891 -->
+ <project name="platform/upstream/ppl"  revision="80f9727a1037f97cef51a371d298a286e20961e3" />
  
  <!-- +2 but not merge -->
 
@@ -47,8 +77,6 @@
  <!-- Automotive/Modello -->
 
  <!-- automotive-->
- <!-- genivi-audio-manager https://review.tizen.org/gerrit/27879 -->
- <project name="profile/ivi/genivi/genivi-audio-manager"  revision="e73abf1288387f6c0d58cde8ac48a1950062294b" />
 
  <!-- App Framework -->
  <!-- applications -->
@@ -65,70 +93,52 @@
 
  
  <!-- Base -->
- <!-- ppl https://review.tizen.org/gerrit/27891 -->
- <project name="platform/upstream/ppl"  revision="80f9727a1037f97cef51a371d298a286e20961e3" />
  <!-- dbus-python https://review.tizen.org/gerrit/28120 -->
  <project name="platform/upstream/dbus-python"  revision="d3f0ade3c2e6d096fc84bd676cd87f2726a3108e" />
  
  <!-- Base/Startup -->
  <!-- systemd https://review.tizen.org/gerrit/29920  -->
- <project name="platform/upstream/systemd"  revision="539e73cf03d12b5d50f7fd3f2a70aea63d9e945f" />
+ <project name="platform/upstream/systemd"  revision="95e1a70c5104b47874519b24e12022e878f2572a" />
  
  <!-- base/device_management -->
 
  
  <!-- Base/File Systems -->
- <!-- ecryptfs https://review.tizen.org/gerrit/#/c/27842/  -->
- <project name="platform/upstream/ecryptfs-utils"  revision="f496d10d2711cbb2b9d3f7600756487df383e737" />
  
  <!-- Graphics & UI Framework -->
  <!-- efl https://review.tizen.org/gerrit/27834  -->
  <project name="platform/upstream/efl"  revision="f7a97238b515310da98621328aadb9275bc92012" />
- <!-- wayland-ivi-extension https://review.tizen.org/gerrit/28126 -->
- <project name="profile/ivi/wayland-ivi-extension"  revision="fd633eb0761da7a0be4bc1f920f62b5bb6dfe639" />
- <!-- ibus https://review.tizen.org/gerrit/27947 -->
- <project name="platform/upstream/ibus"  revision="d474a5c218f8630192ee2bea8d321c245e2c2b89" />
- <!-- libdrm https://review.tizen.org/gerrit/28530 -->
- <project name="platform/upstream/libdrm"  revision="2a8aaf2b9f403cde35b88653394906af578845ab" />
  <!-- efl-theme-tizen https://review.tizen.org/gerrit/31175 -->
  <project name="platform/core/uifw/efl-theme-tizen"  revision="49873649c3970d5c3cbbd45ef1d141eda696f50d" />
  
  <!-- Graphics and UI Framework/Input Framework -->
- <!-- libhangul https://review.tizen.org/gerrit/27601 -->
- <project name="platform/core/uifw/libhangul"  revision="2fe339978867090f76ae0ebb1b1863e374b63ee2" />
+
  
  <!-- Location -->
- <!-- libslp-location https://review.tizen.org/gerrit/28138 -->
- <project name="platform/core/location/libslp-location"  revision="0d55b8e4b5b01019c6cfca14541563bd3c1b4f7f" />
  
  <!-- Multimedia -->
  <!-- alsa-scenario https://review.tizen.org/gerrit/28116 -->
  <project name="framework/multimedia/alsa-scenario-0.2"  revision="915491684441521d60e55c6a5cbb65d482e5e5ab" />
- <!-- libmm-player https://review.tizen.org/gerrit/28123 -->
- <project name="platform/core/multimedia/libmm-player"  revision="d396a30a561a0db96094560b21e24e99029481c0" />
  <!-- avsystem https://review.tizen.org/gerrit/28140 -->
  <project name="platform/core/multimedia/avsystem"  revision="e2bc7b88d123b0ff997061e9a4998106f7f5c3f3" />
- <!-- libmm-utility https://review.tizen.org/gerrit/28154 -->
- <project name="platform/core/multimedia/libmm-utility"  revision="4295b93e417e4734c90639d20ff6c60b110172d7" />
+
  
  <!-- Multimedia/Media Service -->
- <!-- libmm-log https://review.tizen.org/gerrit/31006/ -->
- <project name="platform/core/multimedia/libmm-log"  revision="9e5e5b23416d9a169c587a25a7653fa884444f74" />
+
  
  <!-- Multimedia/Audio FW -->
  <!-- libmedia-service https://review.tizen.org/gerrit/28225 -->
  <project name="platform/core/multimedia/libmedia-service"  revision="b7f1f1ec421c16a4e6fea164495c281887a5d3b8" />
- <!-- pulseaudio https://review.tizen.org/gerrit/31169 -->
- <project name="platform/upstream/pulseaudio"  revision="9f3f3d9dfe4449a019945f65002f714aa49dcc2d" />
+
 
 
  <!-- Multimedia/Libraries -->
  <!-- libav https://review.tizen.org/gerrit/28295 -->
- <project name="platform/upstream/libav"  revision="1445e92f0200ac2ce1a3988334a7d7992122f0f3" />
+ <project name="platform/upstream/libav"  revision="1445e9282952f0200ac2ce1a3988334a7d7992122f0f3" />
 
  <!-- Network and Connectivity-->
  <!-- download-provider https://review.tizen.org/gerrit/27812  -->
- <project name="platform/framework/web/download-provider"  revision="1fb4a3614bd271355b6babf42076d3bda2da122c" />
+ <project name="platform/framework/web/download-provider"  revision="cfad1aa260356701996248ded3e9c90541ddcb11" />
  <!-- hplip https://review.tizen.org/gerrit/27844  -->
  <project name="platform/upstream/hplip"  revision="c8d20b298c235248c8f32c82ca72a93bc7c6a75c" />
  
@@ -149,23 +159,16 @@
  <project name="platform/core/base/sys-string-0"  revision="c055d6d016ce7b4d2189df8355d583fcfa434210" />
  
  <!-- platform_development/python -->
- <!-- python-pygments https://review.tizen.org/gerrit/27847 -->
- <project name="platform/upstream/python-pygments"  revision="1c7de0a40c2763b3bd3f611462f9b6e856a347a5" />
  
  <!-- system -->
  <!-- libwbxml2 https://review.tizen.org/gerrit/28066 -->
  <project name="platform/upstream/libwbxml2"  revision="717cf1e3430cacd4c0ba04394b8f60f1e4ad4900" />
- <!-- gumd https://review.tizen.org/gerrit/31798 -->
- <project name="platform/upstream/gumd"  revision="f247444ac80494744acf7e5678482398f4f0adee" />
- <!-- tlm https://review.tizen.org/gerrit/31821 -->
- <project name="platform/core/system/tlm"  revision="750c73687bbfa61fc564b7078075407cb9d97b38" />
  <!-- libmedia-thumbnail https://review.tizen.org/gerrit/31933 -->
  <project name="platform/core/multimedia/libmedia-thumbnail"  revision="b97d0b8ec596a5e17dbec92fd4e487ec9a91f8ef" />
  
  
  <!-- Testing -->
- <!-- testkit-lite https://review.tizen.org/gerrit/31164 -->
- <project name="test/tools/testkit-lite"  revision="da799487c06614bf07afd6006f2a57520f3f036c" />
+
  
  
  <!-- Graphics & UI Framework/EFL -->
@@ -183,8 +186,6 @@
  <project name="platform/core/base/gconf-dbus" revision="9c7d4e87f97450c4aff1d96db71d7bff881959b2" />
  
  <!-- System/Libraries -->
- <!-- common https://review.tizen.org/gerrit/28680 -->
- <project name="platform/core/api/common" revision="09b56a10f65dd1869c2d1ea987190fa9d9cafd69" />
  <!-- system-info https://review.tizen.org/gerrit/28699 -->
  <project name="platform/core/api/system-info" revision="5697b6bdb6f3cccc3637a0ce50e461dbc7eb9ff3" />
  <!-- privacy-manager-server https://review.tizen.org/gerrit/29928 -->
@@ -195,8 +196,7 @@
  <!-- libwbxml2 https://review.tizen.org/gerrit/31170 -->
  <project name="platform/upstream/libwbxml2" revision="e7ff0d80b8638cd60e06be6d8a3c9364b617ffb1" />
  
- <!-- common-multimedia-suite https://review.tizen.org/gerrit/29420 -->
- <project name="test/common/common-multimedia-suite" revision="0a75992bd0357284a47973ebba5264bc2f18e8b6" />
+
  
  <!-- libav https://review.tizen.org/gerrit/29650 -->
  <project name="platform/upstream/libav" revision="0fd9bbab02cc36060782e7a1f68417b5810300bf" />
