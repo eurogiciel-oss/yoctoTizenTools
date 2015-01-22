@@ -192,8 +192,8 @@ update-desktop-files	meta-tizen-common-base/recipes-application-framework/update
 url-download	meta-tizen-common-base/recipes-application-framework/capi-web-url-download
 uthash	meta-tizen-common-base/recipes-core/uthash
 vala	meta-tizen-common-base/recipes-devtools/vala
+vconf-buxton	meta-tizen-common-base/recipes-application-framework/vconf-buxton
 vconf-internal-keys	meta-tizen-common-base/recipes-application-framework/vconf-internal-keys
-vconf	meta-tizen-common-base/recipes-application-framework/vconf
 wav-player	meta-tizen-common-base/recipes-application-framework/capi-media-wav-player
 wayland-fits	meta-tizen-common-devtools/recipes-devtools/wayland-fits-master
 wayland-ivi-extension	meta-tizen-ivi/recipes-graphics/genivi-shell
