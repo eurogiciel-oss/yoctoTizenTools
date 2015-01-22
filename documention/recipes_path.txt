@@ -190,7 +190,6 @@ tizen-platform-wrapper	meta-tizen-common-base/recipes-core/tizen-platform-wrappe
 udev-rules	meta-tizen-common-base/recipes-core/udev-rules
 update-desktop-files	meta-tizen-common-base/recipes-application-framework/update-desktop-files
 url-download	meta-tizen-common-base/recipes-application-framework/capi-web-url-download
-user-session-units	meta-tizen-common-base/recipes-core/user-session-units
 uthash	meta-tizen-common-base/recipes-core/uthash
 vala	meta-tizen-common-base/recipes-devtools/vala
 vconf-internal-keys	meta-tizen-common-base/recipes-application-framework/vconf-internal-keys
